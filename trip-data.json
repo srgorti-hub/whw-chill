@@ -286,7 +286,7 @@
         },
         {
           "name": "Balmaha",
-          "km": 9,
+          "km": 11.4,
           "note": "End point. Oak Tree Inn for food. Public toilets. Small shop (seasonal). Pier for Loch Lomond cruises"
         }
       ],
@@ -571,19 +571,19 @@
         },
         {
           "name": "Tyndrum — The Green Welly Stop",
-          "km": 20.7,
+          "km": 19.2,
           "type": "cafe/shop",
           "notes": "Public toilets including Changing Places facility, open 7am–10pm. Showers available."
         },
         {
           "name": "Tyndrum — Real Food Cafe",
-          "km": 20.7,
+          "km": 19.2,
           "type": "cafe",
           "notes": "Toilets for customers."
         },
         {
           "name": "Tyndrum — By The Way Hostel/Campsite",
-          "km": 20.7,
+          "km": 19.2,
           "type": "hostel/campsite",
           "notes": "Toilet and shower facilities for guests."
         }
@@ -759,7 +759,7 @@
       ],
       "warnings": [
         "Devil's Staircase summit is exposed — wind and rain can make conditions challenging",
-        "Long descent (614m) is hard on knees — consider trekking poles",
+        "Long descent (555m) is hard on knees — consider trekking poles",
         "No shelter or services between Kingshouse and Kinlochleven"
       ],
       "waypoints": [
@@ -1220,7 +1220,7 @@
         ]
       }
     ],
-    "physical_demands": "The WHW involves 7 consecutive days of walking between 14.5 km and 30.5 km per day, with total ascent across the week exceeding 3,500m. Day 3 (Rowardennan to Inverarnan) is the most technically demanding, with continuous scrambling over rocks and tree roots along Loch Lomond. Day 5 (Tyndrum to Kingshouse) is the longest at 30.5 km across exposed moorland. Day 6 includes the Devil's Staircase climb to 549m followed by a knee-testing 614m descent. Your feet, knees, and back will be under sustained load — conditioning these is the priority.",
+    "physical_demands": "This customised WHW itinerary involves 7 consecutive days of walking between 11.4 km and 24.4 km per day, with total ascent across the week of around 2,150m. Day 7 (Kinlochleven to Fort William) is the longest at 24.4 km and the most demanding. Day 6 includes the Devil's Staircase climb to 549m followed by a long descent into Kinlochleven. Day 3 takes the upper forestry track from Rowardennan to Inversnaid — easier underfoot than the notorious lower lochside path. Several days include taxi or water taxi transfers to keep the walking manageable. Your feet, knees, and back will still be under sustained load — conditioning these is the priority.",
     "recommended_training": [
       "Prioritise time on your feet over speed — the trail rewards endurance, not pace",
       "Train on hills: stair climbers, incline treadmills, or local hills with 200–400m gain",
