@@ -1,0 +1,1280 @@
+{
+  "trip": {
+    "name": "West Highland Way",
+    "destination": "Scotland, United Kingdom",
+    "dates": {
+      "start": "2026-05-09",
+      "end": "2026-05-18"
+    },
+    "group_size": 15,
+    "total_distance_km": 114.0,
+    "total_ascent_m": 2144,
+    "youtube_overview": "https://www.youtube.com/watch?v=Z6Lr0NPZ1L4",
+    "hero_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Lagangarbh_cottage_with_Buachaille_Etive_M%C3%B2r.jpg/1920px-Lagangarbh_cottage_with_Buachaille_Etive_M%C3%B2r.jpg",
+    "description": "The West Highland Way is Scotland's oldest and most celebrated long-distance trail, stretching 154 km from the lowland town of Milngavie on the outskirts of Glasgow to Fort William at the foot of Ben Nevis. Over seven walking days, the route passes through an extraordinary progression of landscapes — from gentle farmland and ancient woodland, along the storied shores of Loch Lomond, across the vast wilderness of Rannoch Moor, past the dramatic mountains of Glencoe, and over the famous Devil's Staircase before descending to Fort William. Opened in 1980, it was Scotland's first officially designated long-distance route and remains by far the most popular, drawing over 50,000 walkers each year. With a group of 15 friends and luggage transfer arranged, this is the perfect way to experience the trail — walking light by day, gathering in Highland inns by evening.",
+    "location_keywords": [
+      "Scottish Highlands landscape",
+      "West Highland Way trail",
+      "Loch Lomond Scotland panorama"
+    ]
+  },
+  "participants": [
+    {
+      "name": "Gorti",
+      "role": "organizer"
+    },
+    {
+      "name": "Sue",
+      "role": "participant"
+    },
+    {
+      "name": "Aaron",
+      "role": "participant"
+    },
+    {
+      "name": "Karen",
+      "role": "participant"
+    },
+    {
+      "name": "Geetanjali",
+      "role": "participant"
+    },
+    {
+      "name": "Geeta",
+      "role": "participant"
+    },
+    {
+      "name": "Alok",
+      "role": "participant"
+    },
+    {
+      "name": "Kalpana",
+      "role": "participant"
+    },
+    {
+      "name": "Nabha",
+      "role": "participant"
+    },
+    {
+      "name": "Asha",
+      "role": "participant"
+    },
+    {
+      "name": "Kalyan",
+      "role": "participant"
+    },
+    {
+      "name": "Maneesha",
+      "role": "participant"
+    },
+    {
+      "name": "Tammy",
+      "role": "participant"
+    },
+    {
+      "name": "Damini",
+      "role": "participant"
+    },
+    {
+      "name": "Santy",
+      "role": "participant"
+    }
+  ],
+  "days": [
+    {
+      "day": 1,
+      "label": "Milngavie to Drymen",
+      "date": "2026-05-11",
+      "distance_km": 19,
+      "ascent_m": 146,
+      "descent_m": 139,
+      "estimated_hours": 5,
+      "difficulty": "Easy",
+      "terrain_tags": [
+        "Farmland",
+        "Woodland paths",
+        "Old railway line",
+        "Gentle rolling"
+      ],
+      "description": "A gentle introduction to the West Highland Way, starting from the granite obelisk in Milngavie town centre. The trail follows the Allander Water before winding through the ancient woodland of Mugdock Country Park, where moss-covered trees filter the light. You'll pass the tranquil Craigallian Loch and the cottages of Carbeth before the landscape opens out into rolling farmland beneath the Campsie Fells.\n\nThe walking is straightforward throughout — good paths, no technical terrain, and only modest undulations. After passing the distinctive volcanic plug of Dumgoyne, which rises dramatically above Glengoyne Distillery (well worth a short detour for a dram), the trail follows an old railway line and quiet lanes before descending through fields into Drymen.\n\nDrymen is a charming village with a good range of pubs, restaurants, and a SPAR shop — your last reliable resupply point before Tyndrum on Day 4. The Clachan Inn claims to be the oldest licensed pub in Scotland. Make the most of the village atmosphere tonight; the wild Highlands are calling from tomorrow.",
+      "accommodation": {
+        "location": "Drymen",
+        "options": [
+          {
+            "name": "Winnock Hotel",
+            "url": "https://winnockhotel.com/"
+          },
+          {
+            "name": "Buchanan Arms",
+            "url": "https://buchanan-arms.co.uk/"
+          },
+          {
+            "name": "Drymen Inn",
+            "url": "https://thedrymeninn.com/"
+          }
+        ]
+      },
+      "resupply_notes": "SPAR shop in Drymen, open daily. Last major resupply before Tyndrum (Day 4). Stock up on snacks and any essentials.",
+      "water_sources": [
+        "Water tap at Milngavie start",
+        "Water tap at Carbeth Cottages",
+        "Water tap at Beech Tree Inn (halfway)",
+        "Drymen village taps"
+      ],
+      "escape_routes": [
+        "Bus from Drymen to Glasgow (First Bus 309, roughly hourly service)"
+      ],
+      "warnings": [],
+      "waypoints": [
+        {
+          "name": "Milngavie Obelisk (Start)",
+          "km": 0,
+          "note": "Official start of the West Highland Way — cafes, shops, ATMs nearby"
+        },
+        {
+          "name": "Mugdock Country Park",
+          "km": 3.5,
+          "note": "Ancient woodland, visitor centre with cafe and toilets"
+        },
+        {
+          "name": "Craigallian Loch",
+          "km": 6,
+          "note": "Scenic loch with memorial to the Craigallian Fire — a symbol of Scottish outdoor access"
+        },
+        {
+          "name": "Carbeth",
+          "km": 8.5,
+          "note": "Water tap by trail. Distinctive hutting community"
+        },
+        {
+          "name": "Beech Tree Inn",
+          "km": 11.2,
+          "note": "Food and water tap — good lunch stop"
+        },
+        {
+          "name": "Dumgoyne viewpoint",
+          "km": 13,
+          "note": "Views of the volcanic plug above Glengoyne Distillery. Short detour for whisky tasting"
+        },
+        {
+          "name": "Drymen village",
+          "km": 19.2,
+          "note": "Village is 1 km off the main trail. SPAR shop, pubs, restaurants"
+        }
+      ],
+      "links": {
+        "alltrails": "https://www.alltrails.com/trail/scotland/glasgow-city-3/west-highland-way-milngavie-to-drymen",
+        "komoot": "https://www.komoot.com/tour/86976515",
+        "walk_highlands": "https://www.walkhighlands.co.uk/lochlomond/milngavie-drymen.shtml",
+        "gpx_download": "gpx/day-1.gpx"
+      },
+      "youtube": "https://www.youtube.com/watch?v=dyvDoD_Tg3w",
+      "photos": [
+        "photos/day-1/img1.jpg",
+        "photos/day-1/img2.jpg",
+        "photos/day-1/img3.jpg"
+      ],
+      "location_keywords": [
+        "Mugdock Country Park woodland",
+        "Craigallian Loch Scotland",
+        "Drymen village Scotland"
+      ],
+      "map": "maps/day-1-map.jpg",
+      "elevation_profile": "elevation/day-1-profile.json",
+      "toilet_facilities": [
+        {
+          "name": "Milngavie Town Centre / Railway Station",
+          "km": 0,
+          "type": "public",
+          "notes": "Toilets at station (Platform 1) during ticket office hours. Cafes and shops on pedestrianised High Street."
+        },
+        {
+          "name": "Mugdock Country Park Visitor Centre",
+          "km": 3,
+          "type": "visitor centre",
+          "notes": "Toilets in courtyard including accessible toilet. Slight detour off WHW into the park."
+        },
+        {
+          "name": "Beech Tree Inn",
+          "km": 11,
+          "type": "pub/restaurant",
+          "notes": "Customers only. Food Mon–Fri 11am–3pm, Sat–Sun 11am–7pm."
+        },
+        {
+          "name": "Drymen Village",
+          "km": 19,
+          "type": "public",
+          "notes": "Public toilets in village. Clachan Inn, SPAR shop. Village is ~900m off the main trail."
+        }
+      ],
+      "taxi_services": [
+        {
+          "name": "Ambassador Taxis",
+          "phone": "0141 956 2956",
+          "url": "https://milngavie.co.uk/businessdirectory/ambassadortaxis/",
+          "notes": "Based in Milngavie, 35+ years of service"
+        },
+        {
+          "name": "Drymen Taxi Services",
+          "phone": "01360 660077",
+          "url": "https://www.facebook.com/p/Drymen-Taxi-Services-100057504427238/",
+          "notes": "Based in Drymen, covers Milngavie to Rowardennan"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "label": "Drymen to Balmaha",
+      "date": "2026-05-12",
+      "distance_km": 11.4,
+      "ascent_m": 334,
+      "descent_m": 380,
+      "estimated_hours": 4,
+      "difficulty": "Easy",
+      "terrain_tags": [
+        "Forest trails",
+        "Hill climb",
+        "Village paths"
+      ],
+      "description": "Today delivers the first genuine highlight of the Way: the ascent of Conic Hill (361m). After passing through Garadhban Forest, the trail climbs steadily to a summit that sits directly on the Highland Boundary Fault — the geological dividing line between the Scottish Lowlands and the Highlands. From the top, the panorama over Loch Lomond and its scattered islands is breathtaking, and you can literally see the change in landscape from the gentle south to the rugged north.\n\nThe descent from Conic Hill into Balmaha is steep and rocky in places — take care, especially if wet. Balmaha is a bustling little village on the loch shore with the Oak Tree Inn providing excellent food and a welcome rest stop.\n\nWith a shorter walking day, the afternoon is free for an optional cruise on Loch Lomond. Cruise Loch Lomond operates sightseeing trips from Balmaha pier, visiting the islands including Inchcailloch — part of the Loch Lomond National Nature Reserve. A wonderful way to see the loch from the water after walking above it all morning.",
+      "accommodation": {
+        "location": "Balmaha",
+        "options": [
+          {
+            "name": "Oak Tree Inn",
+            "url": "https://www.theoaktreeinn.co.uk/"
+          }
+        ]
+      },
+      "resupply_notes": "Small shop in Balmaha (seasonal hours). Stock up in Drymen before leaving if needed.",
+      "water_sources": [
+        "Balmaha village taps",
+        "Oak Tree Inn"
+      ],
+      "escape_routes": [
+        "Bus from Balmaha to Balloch/Glasgow (seasonal)"
+      ],
+      "warnings": [
+        "Steep descent from Conic Hill — take care in wet conditions"
+      ],
+      "optional_activities": [
+        {
+          "name": "Loch Lomond Cruise",
+          "duration": "90 minutes",
+          "time_of_day": "Afternoon",
+          "operator": "Cruise Loch Lomond",
+          "url": "https://www.cruiselochlomond.co.uk",
+          "departure": "Balmaha pier",
+          "notes": "Sightseeing cruise visiting the islands of Loch Lomond including Inchcailloch nature reserve. Check website for seasonal schedules and booking."
+        }
+      ],
+      "waypoints": [
+        {
+          "name": "Drymen turn-off (trail junction)",
+          "km": 0,
+          "note": "Rejoin main trail from Drymen village"
+        },
+        {
+          "name": "Garadhban Forest",
+          "km": 2.5,
+          "note": "Forest track, gentle climbing begins"
+        },
+        {
+          "name": "Conic Hill summit (361m)",
+          "km": 6.5,
+          "note": "Highland Boundary Fault. Spectacular panorama over Loch Lomond and islands"
+        },
+        {
+          "name": "Balmaha",
+          "km": 9,
+          "note": "End point. Oak Tree Inn for food. Public toilets. Small shop (seasonal). Pier for Loch Lomond cruises"
+        }
+      ],
+      "links": {
+        "alltrails": "https://www.alltrails.com/trail/scotland/west-dunbartonshire/drymen-to-rowardennan",
+        "walk_highlands": "https://www.walkhighlands.co.uk/lochlomond/drymen-balmaha.shtml",
+        "gpx_download": "gpx/day-2.gpx"
+      },
+      "youtube": "https://www.youtube.com/watch?v=kyO-OT69n-o",
+      "photos": [
+        "photos/day-2/img1.jpg",
+        "photos/day-2/img2.jpg",
+        "photos/day-2/img3.jpg"
+      ],
+      "location_keywords": [
+        "Conic Hill summit Loch Lomond",
+        "Balmaha Loch Lomond",
+        "Cruise Loch Lomond boat"
+      ],
+      "map": "maps/day-2-map.jpg",
+      "elevation_profile": "elevation/day-2-profile.json",
+      "toilet_facilities": [
+        {
+          "name": "Drymen Village",
+          "km": 0,
+          "type": "public",
+          "notes": "Public toilets, pubs, and cafes in village."
+        },
+        {
+          "name": "Balmaha Village",
+          "km": 11,
+          "type": "public",
+          "notes": "Public toilets at car park/visitor centre. Oak Tree Inn (customers). Multiple cafes, village shop."
+        }
+      ],
+      "taxi_services": [
+        {
+          "name": "Drymen Taxi Services",
+          "phone": "01360 660077",
+          "url": "https://www.facebook.com/p/Drymen-Taxi-Services-100057504427238/",
+          "notes": "Covers Drymen, Balmaha, and Rowardennan"
+        },
+        {
+          "name": "Loch Lomond Cabs",
+          "phone": "01389 717104",
+          "url": "https://lochlomondcabs.com/",
+          "notes": "4 and 8-seater vehicles, broader Loch Lomond area"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "label": "Rowardennan to Inversnaid",
+      "date": "2026-05-13",
+      "distance_km": 11.5,
+      "ascent_m": 129,
+      "descent_m": 113,
+      "estimated_hours": 4.5,
+      "difficulty": "Moderate",
+      "terrain_tags": [
+        "Forestry track",
+        "Woodland",
+        "Hill paths"
+      ],
+      "description": "Taking the upper forestry track from Rowardennan, this route avoids the notoriously rough lower lochside path with its relentless tree roots and rock scrambles. The upper path climbs higher through the forest on wide, well-graded tracks — easier underfoot but with more elevation gain. You'll still enjoy views through the trees down to Loch Lomond, and the walking is pleasant and steady rather than technical.\n\nAt Inversnaid, you'll find the dramatic Inversnaid Falls — a waterfall immortalised by Gerard Manley Hopkins — and the historic Inversnaid Hotel (seasonal). From here, take a water taxi across Loch Lomond to Tarbet on the west shore, then a taxi onward to the Drovers Inn at Inverarnan — a wonderfully eccentric 300-year-old Highland inn with stuffed animals on the walls and live music on many evenings.",
+      "accommodation": {
+        "location": "Inverarnan",
+        "options": [
+          {
+            "name": "Drovers Inn",
+            "url": "https://www.droversinn.co.uk/"
+          }
+        ]
+      },
+      "resupply_notes": "No shops between Rowardennan and Inversnaid. Carry all food and water for the hike. Drovers Inn serves meals in the evening.",
+      "water_sources": [
+        "Streams along lochside (treat before drinking)",
+        "Inversnaid Hotel (seasonal, may be closed)"
+      ],
+      "escape_routes": [
+        "Water taxi from Inversnaid to Tarbet (planned route)",
+        "No road access between Rowardennan and Inversnaid — no mid-stage bailout"
+      ],
+      "transport_to_start": {
+        "type": "Taxi",
+        "from": "Balmaha",
+        "to": "Rowardennan",
+        "notes": "Taxi from Balmaha to Rowardennan trailhead in the morning."
+      },
+      "warnings": [
+        "Very limited mobile signal along the loch shore",
+        "Carry sufficient food and water — no services until Inversnaid"
+      ],
+      "transport_after_hike": [
+        {
+          "leg": 1,
+          "type": "Water taxi",
+          "from": "Inversnaid",
+          "to": "Tarbet",
+          "notes": "Water taxi across Loch Lomond. Pre-book in advance — check with Cruise Loch Lomond or local operators."
+        },
+        {
+          "leg": 2,
+          "type": "Taxi",
+          "from": "Tarbet",
+          "to": "Drovers Inn, Inverarnan",
+          "notes": "Approximately 15-minute drive north on the A82."
+        }
+      ],
+      "waypoints": [
+        {
+          "name": "Rowardennan",
+          "km": 0,
+          "note": "Start from hotel/hostel"
+        },
+        {
+          "name": "Ptarmigan Lodge",
+          "km": 3,
+          "note": "Trail becomes rougher beyond this point. End of camping management zone"
+        },
+        {
+          "name": "Rowchoish Bothy",
+          "km": 5.5,
+          "note": "Open shelter, basic refuge in emergency"
+        },
+        {
+          "name": "Inversnaid Falls",
+          "km": 11.5,
+          "note": "End point. Dramatic waterfall. Hotel (seasonal) with bar meals. Water taxi departure to Tarbet"
+        }
+      ],
+      "links": {
+        "alltrails": "https://www.alltrails.com/trail/scotland/argyll-and-bute/the-west-highland-way-rowardennan-to-inverarnan",
+        "walk_highlands": "https://www.walkhighlands.co.uk/lochlomond/rowardennan-inversnaid.shtml",
+        "gpx_download": "gpx/day-3.gpx"
+      },
+      "youtube": "https://www.youtube.com/watch?v=WvEHutEe2gs",
+      "photos": [
+        "photos/day-3/img1.jpg",
+        "photos/day-3/img2.jpg",
+        "photos/day-3/img3.jpg"
+      ],
+      "location_keywords": [
+        "Loch Lomond eastern shore woodland",
+        "Inversnaid Falls Scotland",
+        "Drovers Inn Inverarnan"
+      ],
+      "map": "maps/day-3-map.jpg",
+      "elevation_profile": "elevation/day-3-profile.json",
+      "toilet_facilities": [
+        {
+          "name": "Rowardennan Car Park / Hotel",
+          "km": 0,
+          "type": "public",
+          "notes": "Public toilets at car park (seasonal). Hotel bar available."
+        },
+        {
+          "name": "Inversnaid Hotel",
+          "km": 11.5,
+          "type": "hotel",
+          "notes": "Walkers bar with toilets, water tap, snacks. Check seasonal opening hours."
+        }
+      ],
+      "taxi_services": [
+        {
+          "name": "Lodge Cars",
+          "phone": "01838 300534",
+          "url": "https://www.lodge-cars.co.uk/",
+          "notes": "Based in Crianlarich, covers Inverarnan and surrounding areas"
+        },
+        {
+          "name": "24/7 Cars",
+          "phone": "01838 300307",
+          "url": "https://247taxis.co.uk/",
+          "notes": "Crianlarich area, pre-booking required"
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "label": "Inverarnan to Tyndrum",
+      "date": "2026-05-14",
+      "distance_km": 19.2,
+      "ascent_m": 430,
+      "descent_m": 227,
+      "estimated_hours": 5.5,
+      "difficulty": "Moderate",
+      "terrain_tags": [
+        "Glen trail",
+        "River paths",
+        "Forest tracks",
+        "Old military road"
+      ],
+      "description": "A welcome change of pace after yesterday's lochside scramble. The trail follows Glen Falloch northward through increasingly Highland scenery, with the River Falloch crashing through rocky gorges and over waterfalls beside the path. The terrain is far better underfoot — mostly good tracks and paths through open glen and forested hillside.\n\nThe route climbs gradually through the glen, passing the Falls of Falloch (a worthwhile short detour) before reaching Crianlarich, a small Highlands village just off the main trail. Crianlarich has a train station, a small shop, and cafes — a useful resupply point. Beyond Crianlarich, the trail follows old military roads and farm tracks through Strath Fillan, passing the atmospheric ruins of St Fillan's Priory, before reaching Tyndrum.\n\nTyndrum is a welcome oasis with two hotels, a bunkhouse, the famous Green Welly Stop, a fish and chip van, and the Real Food Cafe. There's a Co-op for supplies — your last proper shop before Fort William. The village sits in a spectacular bowl of mountains and marks the transition into the true Highland wilderness ahead.",
+      "accommodation": {
+        "location": "Tyndrum",
+        "options": [
+          {
+            "name": "Tyndrum Lodges",
+            "url": "https://tyndrumlodges.co.uk/"
+          },
+          {
+            "name": "Tyndrum Inn",
+            "url": "https://thetyndruminn.co.uk/"
+          }
+        ]
+      },
+      "resupply_notes": "Small shop in Crianlarich (off-route, 1.5 km detour). Co-op in Tyndrum — last shop before Fort William. Green Welly Stop for outdoor gear and snacks. Real Food Cafe for excellent fish and chips.",
+      "water_sources": [
+        "River Falloch (treat before drinking)",
+        "Crianlarich village (1.5 km detour)",
+        "Tyndrum village taps and shops"
+      ],
+      "escape_routes": [
+        "Crianlarich: train station on the West Highland Line",
+        "Tyndrum: Citylink bus to Glasgow or Fort William (multiple daily)",
+        "Tyndrum Lower station: trains to Glasgow"
+      ],
+      "warnings": [],
+      "waypoints": [
+        {
+          "name": "Inverarnan",
+          "km": 0,
+          "note": "Start from Drovers Inn"
+        },
+        {
+          "name": "Falls of Falloch",
+          "km": 3.5,
+          "note": "Short detour to dramatic waterfall on the River Falloch"
+        },
+        {
+          "name": "Derrydaroch",
+          "km": 7,
+          "note": "Cattle farm, trail follows river"
+        },
+        {
+          "name": "Crianlarich turn-off",
+          "km": 10,
+          "note": "1.5 km detour to Crianlarich village — shop, cafes, train station"
+        },
+        {
+          "name": "Kirkton Farm / St Fillan's Priory",
+          "km": 14,
+          "note": "Ruins of medieval priory in Strath Fillan. Atmospheric spot"
+        },
+        {
+          "name": "Tyndrum",
+          "km": 19.5,
+          "note": "Green Welly Stop, Co-op, Real Food Cafe. Last shop before Fort William"
+        }
+      ],
+      "links": {
+        "alltrails": "https://www.alltrails.com/trail/scotland/argyll-and-bute/west-highland-way-inverarnan-to-tyndrum",
+        "walk_highlands": "https://www.walkhighlands.co.uk/lochlomond/inverarnan-tyndrum.shtml",
+        "gpx_download": "gpx/day-4.gpx"
+      },
+      "youtube": "https://www.youtube.com/watch?v=FKQEkBGnPs0",
+      "photos": [
+        "photos/day-4/img1.jpg",
+        "photos/day-4/img2.jpg",
+        "photos/day-4/img3.jpg"
+      ],
+      "location_keywords": [
+        "Glen Falloch Scotland river",
+        "Tyndrum village Highlands",
+        "Strath Fillan priory ruins"
+      ],
+      "map": "maps/day-4-map.jpg",
+      "elevation_profile": "elevation/day-4-profile.json",
+      "toilet_facilities": [
+        {
+          "name": "Drovers Inn / Beinglas Farm",
+          "km": 0,
+          "type": "pub/campsite",
+          "notes": "Drovers Inn toilets from 9am. Beinglas Farm full toilet block."
+        },
+        {
+          "name": "Crianlarich Village (detour)",
+          "km": 10,
+          "type": "public",
+          "notes": "Public toilets on Glenfalloch Road. Pubs, hotel, shops. DETOUR: ~1.5 km off the main WHW route."
+        },
+        {
+          "name": "Tyndrum — The Green Welly Stop",
+          "km": 20.7,
+          "type": "cafe/shop",
+          "notes": "Public toilets including Changing Places facility, open 7am–10pm. Showers available."
+        },
+        {
+          "name": "Tyndrum — Real Food Cafe",
+          "km": 20.7,
+          "type": "cafe",
+          "notes": "Toilets for customers."
+        },
+        {
+          "name": "Tyndrum — By The Way Hostel/Campsite",
+          "km": 20.7,
+          "type": "hostel/campsite",
+          "notes": "Toilet and shower facilities for guests."
+        }
+      ],
+      "taxi_services": [
+        {
+          "name": "Lodge Cars",
+          "phone": "01838 300534",
+          "url": "https://www.lodge-cars.co.uk/",
+          "notes": "Based in Crianlarich, covers Tyndrum and beyond"
+        },
+        {
+          "name": "BOO Cars",
+          "phone": "",
+          "url": "https://www.boocars.co.uk/",
+          "notes": "Based in Bridge of Orchy, online booking only, covers Tyndrum to Kingshouse"
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "label": "Inveroran to Kingshouse",
+      "date": "2026-05-15",
+      "distance_km": 14.6,
+      "ascent_m": 288,
+      "descent_m": 225,
+      "estimated_hours": 5,
+      "difficulty": "Moderate",
+      "terrain_tags": [
+        "Old military road",
+        "Open moorland",
+        "Exposed terrain",
+        "Mountain scenery"
+      ],
+      "description": "Arguably the most spectacular day on the Way. After a taxi from Tyndrum to the Inveroran Hotel — a historic coaching inn — the trail crosses the shoulder of the Black Mount before descending onto Rannoch Moor itself. This vast, peat-bog wilderness stretches to the horizon in every direction — one of the last true wilderness areas in Europe. The old military road provides solid footing across the moor.\n\nThe day culminates with the approach to Kingshouse, where Buachaille Etive Mòr rises suddenly from the moor like a giant sentinel guarding the entrance to Glencoe. The recently renovated Kingshouse Hotel, in this location since 1750, is the perfect reward.",
+      "accommodation": {
+        "location": "Glencoe",
+        "options": [
+          {
+            "name": "Kingshouse Hotel",
+            "url": "https://www.kingshousehotel.co.uk/"
+          }
+        ]
+      },
+      "transport_to_start": {
+        "type": "Taxi",
+        "from": "Tyndrum",
+        "to": "Inveroran Hotel",
+        "notes": "Taxi from Tyndrum to Inveroran Hotel to pick up the trail. Approximately 20-minute drive."
+      },
+      "resupply_notes": "No shops between Inveroran and Kingshouse. Inveroran Hotel may serve lunch (check seasonal hours). Kingshouse Hotel has a bar and restaurant. Carry snacks for the crossing.",
+      "water_sources": [
+        "Inveroran Hotel",
+        "Streams on Rannoch Moor (plentiful but treat before drinking)",
+        "Kingshouse Hotel"
+      ],
+      "escape_routes": [
+        "Inveroran: road access, taxi back to Tyndrum",
+        "Kingshouse: Citylink bus stop on the A82 (Glasgow-Fort William service)"
+      ],
+      "warnings": [
+        "Rannoch Moor is fully exposed with no shelter — carry waterproofs and warm layers regardless of forecast",
+        "Limited mobile signal across Rannoch Moor",
+        "No shops or food sources between Inveroran and Kingshouse — carry snacks"
+      ],
+      "waypoints": [
+        {
+          "name": "Inveroran Hotel",
+          "km": 0,
+          "note": "Start point. Historic coaching inn — good for a coffee before setting off"
+        },
+        {
+          "name": "Black Mount ascent",
+          "km": 3,
+          "note": "Trail climbs onto the moor. Views of Black Mount peaks to the west"
+        },
+        {
+          "name": "Ba Bridge (Rannoch Moor)",
+          "km": 8,
+          "note": "Crossing point on the vast moor. Stunning 360-degree wilderness views"
+        },
+        {
+          "name": "Kingshouse Hotel",
+          "km": 14.6,
+          "note": "Historic inn since 1750. Recently renovated. Bar, restaurant, bunkhouse. Iconic view of Buachaille Etive Mòr"
+        }
+      ],
+      "links": {
+        "walk_highlands": "https://www.walkhighlands.co.uk/argyll/inveroran-kingshouse.shtml",
+        "gpx_download": "gpx/day-5.gpx"
+      },
+      "youtube": "https://www.youtube.com/watch?v=beunflMBkbU",
+      "photos": [
+        "photos/day-5/img1.jpg",
+        "photos/day-5/img2.jpg",
+        "photos/day-5/img3.jpg"
+      ],
+      "location_keywords": [
+        "Rannoch Moor Scotland wilderness",
+        "Buachaille Etive Mor Glencoe",
+        "Inveroran Hotel Highland"
+      ],
+      "map": "maps/day-5-map.jpg",
+      "elevation_profile": "elevation/day-5-profile.json",
+      "toilet_facilities": [
+        {
+          "name": "Inveroran Hotel",
+          "km": 0,
+          "type": "hotel",
+          "notes": "Toilets for walkers — buy a drink or make a donation. Bar and food. Last stop before Rannoch Moor."
+        },
+        {
+          "name": "Kingshouse Hotel / Bunkhouse",
+          "km": 14.6,
+          "type": "hotel/public",
+          "notes": "Public toilets and shower block at bunkhouse. Hotel bar and restaurant."
+        }
+      ],
+      "taxi_services": [
+        {
+          "name": "BOO Cars",
+          "phone": "",
+          "url": "https://www.boocars.co.uk/",
+          "notes": "Based in Bridge of Orchy, covers Inveroran and Kingshouse. Pre-book only"
+        },
+        {
+          "name": "Glencoe Taxis",
+          "phone": "01855 811764",
+          "url": "https://glencoetaxis.uk/",
+          "notes": "Two 8-seater minibuses, covers Glencoe to Kingshouse area"
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "label": "Kingshouse to Kinlochleven",
+      "date": "2026-05-16",
+      "distance_km": 13.9,
+      "ascent_m": 319,
+      "descent_m": 555,
+      "estimated_hours": 4.5,
+      "difficulty": "Moderate",
+      "terrain_tags": [
+        "Mountain pass",
+        "Zigzag climb",
+        "Exposed ridge",
+        "Long descent",
+        "Military road"
+      ],
+      "description": "A shorter but dramatic day featuring the most famous climb on the West Highland Way: the Devil's Staircase. Despite its fearsome name, this is a well-graded zigzag path climbing 250 metres to the highest point on the entire trail at 549 metres. The effort is spectacularly rewarded with views south over Glencoe's great ridges, east across Rannoch Moor, and north toward the Mamores and Ben Nevis.\n\nFrom Kingshouse, the trail follows the old military road to the base of the Staircase. The climb is steady rather than brutal — the zigzags were originally engineered for soldiers and pack horses. At the summit cairn, take time to savour the panorama before beginning the long descent toward Kinlochleven. The path drops through a scenic Highland landscape of heather moorland and scattered birch, with the Mamores ridge line filling the northern horizon.\n\nKinlochleven is a sizeable town at the head of Loch Leven, with a Co-op, several pubs and restaurants, and the Ice Factor — the world's largest indoor ice climbing facility. After the minimalism of Kingshouse, the town's amenities feel luxurious. Enjoy the shorter day and rest your legs for the final push to Fort William tomorrow.",
+      "accommodation": {
+        "location": "Kinlochleven",
+        "options": [
+          {
+            "name": "MacDonald Hotel",
+            "url": "https://macdonaldhotel.co.uk/"
+          },
+          {
+            "name": "Tailrace Inn",
+            "url": "https://thetailraceinn.co.uk/"
+          }
+        ]
+      },
+      "resupply_notes": "No food or shops between Kingshouse and Kinlochleven — carry packed lunch. Co-op supermarket in Kinlochleven for final day resupply. Multiple restaurants, cafes, and takeaways in town.",
+      "water_sources": [
+        "Kingshouse Hotel before departure",
+        "Streams on the Devil's Staircase (plentiful, treat before drinking)",
+        "Kinlochleven town taps"
+      ],
+      "escape_routes": [
+        "No mid-stage bailout — once on the Devil's Staircase, continue to Kinlochleven",
+        "Kinlochleven: Stagecoach bus 44 to Fort William and Glencoe village"
+      ],
+      "warnings": [
+        "Devil's Staircase summit is exposed — wind and rain can make conditions challenging",
+        "Long descent (614m) is hard on knees — consider trekking poles",
+        "No shelter or services between Kingshouse and Kinlochleven"
+      ],
+      "waypoints": [
+        {
+          "name": "Kingshouse Hotel",
+          "km": 0,
+          "note": "Start from hotel. Fill water bottles before leaving"
+        },
+        {
+          "name": "Altnafeadh (A82 crossing)",
+          "km": 3,
+          "note": "Road crossing. Last chance for Citylink bus bailout. View into Glencoe"
+        },
+        {
+          "name": "Devil's Staircase base",
+          "km": 4.5,
+          "note": "Zigzag climb begins. Well-graded military road"
+        },
+        {
+          "name": "Devil's Staircase summit (549m)",
+          "km": 6.5,
+          "note": "Highest point on the WHW. Spectacular panorama over Glencoe, Rannoch Moor, and Mamores"
+        },
+        {
+          "name": "Loch Eilde Mòr viewpoint",
+          "km": 9,
+          "note": "Mountain loch visible below the trail"
+        },
+        {
+          "name": "Kinlochleven",
+          "km": 14.5,
+          "note": "Town with Co-op, pubs, restaurants. Ice Factor indoor climbing centre"
+        }
+      ],
+      "links": {
+        "alltrails": "https://www.alltrails.com/trail/scotland/highlands/west-highland-way-kingshouse-to-kinlochleven",
+        "walk_highlands": "https://www.walkhighlands.co.uk/fortwilliam/kingshouse-kinlochleven.shtml",
+        "gpx_download": "gpx/day-6.gpx"
+      },
+      "youtube": "https://www.youtube.com/watch?v=wiP5hMbfSjc",
+      "photos": [
+        "photos/day-6/img1.jpg",
+        "photos/day-6/img2.jpg",
+        "photos/day-6/img3.jpg"
+      ],
+      "location_keywords": [
+        "Devils Staircase West Highland Way",
+        "Glencoe mountains panorama",
+        "Kinlochleven Loch Leven Scotland"
+      ],
+      "map": "maps/day-6-map.jpg",
+      "elevation_profile": "elevation/day-6-profile.json",
+      "toilet_facilities": [
+        {
+          "name": "Kingshouse Hotel / Bunkhouse",
+          "km": 0,
+          "type": "hotel/public",
+          "notes": "Public toilets and showers at bunkhouse. Hotel bar. Use before departing."
+        },
+        {
+          "name": "Kinlochleven — Public Toilets",
+          "km": 14.5,
+          "type": "public",
+          "notes": "Opposite the Ice Factor. Disabled toilet open through the night."
+        },
+        {
+          "name": "Kinlochleven — Tailrace Inn",
+          "km": 14.5,
+          "type": "pub/hotel",
+          "notes": "Centrally located on Riverside Road. Customers."
+        },
+        {
+          "name": "Kinlochleven — Blackwater Hostel & Campsite",
+          "km": 14.5,
+          "type": "hostel/campsite",
+          "notes": "Renovated shower block with toilets."
+        },
+        {
+          "name": "Kinlochleven — Co-op & Cafes",
+          "km": 14.5,
+          "type": "shop/cafe",
+          "notes": "Supermarket and various cafes in town."
+        }
+      ],
+      "taxi_services": [
+        {
+          "name": "West Highland Taxis",
+          "phone": "01855 831495",
+          "url": "https://www.westhighlandtaxis.com/",
+          "notes": "Based in Kinlochleven, specialises in WHW walker transport. 20+ years experience"
+        },
+        {
+          "name": "Glencoe Taxis",
+          "phone": "01855 811764",
+          "url": "https://glencoetaxis.uk/",
+          "notes": "Covers Kinlochleven from Ballachulish base, two 8-seater minibuses"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "label": "Kinlochleven to Fort William",
+      "date": "2026-05-17",
+      "distance_km": 24.4,
+      "ascent_m": 498,
+      "descent_m": 505,
+      "estimated_hours": 7,
+      "difficulty": "Strenuous",
+      "terrain_tags": [
+        "Mountain pass",
+        "Forest trails",
+        "Old military road",
+        "Glen Nevis",
+        "Exposed sections"
+      ],
+      "description": "The final day is a fitting climax to the West Highland Way. The route climbs out of Kinlochleven through birch woodland into the Lairigmor — a dramatic mountain pass flanked by the Mamores to the east and the Grey Corries to the north. Walking through this pass on the old military road, surrounded by some of the finest mountain scenery in Scotland, is one of the trail's defining moments.\n\nBeyond the pass, the trail descends through forestry plantations before reaching the magnificent Glen Nevis, where the imposing bulk of Ben Nevis (1345m) — the highest mountain in the British Isles — dominates the skyline. The sense of approaching journey's end, with Britain's greatest mountain as the backdrop, is deeply satisfying.\n\nThe final stretch follows the glen's access road into Fort William, where the trail ends at a statue of a walker in Gordon Square. This is the moment to celebrate with your group — 154 km of Scotland's finest landscapes conquered together. Fort William has an excellent range of restaurants and pubs for a well-deserved celebration dinner. No accommodation or resupply along the route today, so carry everything you need.",
+      "accommodation": {
+        "location": "Fort William",
+        "options": [
+          {
+            "name": "Bank Street Lodge",
+            "url": "https://www.bankstreetlodge.co.uk/"
+          },
+          {
+            "name": "Distillery Guest House",
+            "url": "https://www.visitscotland.com/info/accommodation/distillery-guest-house-p1422441"
+          }
+        ]
+      },
+      "resupply_notes": "No shops or services between Kinlochleven and Fort William — carry all food and water. Fort William has full town facilities: supermarkets, outdoor shops, restaurants, and pubs.",
+      "water_sources": [
+        "Kinlochleven before departure",
+        "Streams in the Lairigmor (treat before drinking)",
+        "No taps until Fort William"
+      ],
+      "escape_routes": [
+        "No mid-stage bailout — no road access or public transport between Kinlochleven and Glen Nevis",
+        "Fort William: train and bus connections to Glasgow, Edinburgh, and Inverness"
+      ],
+      "warnings": [
+        "No services or shelter for the entire 25 km — carry sufficient food, water, and waterproofs",
+        "Lairigmor pass is exposed and can be windy",
+        "Final forest section has multiple path junctions — follow waymarks carefully",
+        "Start early to allow time for a comfortable finish and celebration"
+      ],
+      "waypoints": [
+        {
+          "name": "Kinlochleven",
+          "km": 0,
+          "note": "Final resupply at Co-op. Fill water bottles before leaving"
+        },
+        {
+          "name": "Lairigmor (pass entrance)",
+          "km": 4,
+          "note": "Old military road enters the mountain pass between Mamores and Grey Corries"
+        },
+        {
+          "name": "Lairigmor summit",
+          "km": 7.5,
+          "note": "Highest point of the day. Spectacular mountain scenery"
+        },
+        {
+          "name": "Blar a' Chaorainn (forest)",
+          "km": 12,
+          "note": "Trail enters forestry plantation. Multiple junctions — follow waymarks"
+        },
+        {
+          "name": "Nevis Forest viewpoint",
+          "km": 17,
+          "note": "First views of Ben Nevis through the trees"
+        },
+        {
+          "name": "Glen Nevis",
+          "km": 21,
+          "note": "Emerging into the glen with Ben Nevis towering above"
+        },
+        {
+          "name": "Fort William (Gordon Square)",
+          "km": 25,
+          "note": "Official end of the West Highland Way! Statue and plaque mark the finish"
+        }
+      ],
+      "links": {
+        "alltrails": "https://www.alltrails.com/trail/scotland/highlands/west-highland-way-kinlochleven-to-fort-william",
+        "walk_highlands": "https://www.walkhighlands.co.uk/fortwilliam/kinlochleven-fort-william.shtml",
+        "gpx_download": "gpx/day-7.gpx"
+      },
+      "youtube": "https://www.youtube.com/watch?v=G1nvHoqszDU",
+      "photos": [
+        "photos/day-7/img1.jpg",
+        "photos/day-7/img2.jpg",
+        "photos/day-7/img3.jpg"
+      ],
+      "location_keywords": [
+        "Lairigmor pass Mamores Scotland",
+        "Ben Nevis Fort William view",
+        "Glen Nevis Highland landscape"
+      ],
+      "map": "maps/day-7-map.jpg",
+      "elevation_profile": "elevation/day-7-profile.json",
+      "toilet_facilities": [
+        {
+          "name": "Kinlochleven Town",
+          "km": 0,
+          "type": "public",
+          "notes": "Public toilets opposite Ice Factor. Pubs, cafes, supermarket. USE BEFORE DEPARTING."
+        },
+        {
+          "name": "Glen Nevis Visitor Centre",
+          "km": 23,
+          "type": "visitor centre",
+          "notes": "Public toilets. Located where trail descends to Glen Nevis area near Fort William."
+        },
+        {
+          "name": "Fort William Town Centre",
+          "km": 24.5,
+          "type": "public",
+          "notes": "Public toilets at View Forth. Train station toilets. Numerous pubs, cafes, restaurants."
+        }
+      ],
+      "taxi_services": [
+        {
+          "name": "Alistair's Taxis",
+          "phone": "01397 252525",
+          "url": "https://www.alistairstaxis.co.uk/west-highland-way-taxi-transfers",
+          "notes": "Fort William, two minibuses up to 16 passengers. Offers WHW return transfers to Milngavie"
+        },
+        {
+          "name": "Lochaber Taxis",
+          "phone": "01397 703334",
+          "url": "https://www.lochabertaxis.com/",
+          "notes": "Fort William and Lochaber area, long-distance walker support"
+        }
+      ]
+    }
+  ],
+  "weather": {
+    "month": "May",
+    "temp_min_c": 5,
+    "temp_max_c": 15,
+    "precipitation_probability": 0.45,
+    "daylight_hours": 17,
+    "wind_kmh": "15-35",
+    "description": "May is one of the best months for walking the West Highland Way. Days are long with up to 17 hours of daylight, temperatures are mild but cool at altitude, and rainfall is typically lower than summer months. However, Scottish weather is notoriously changeable — expect anything from warm sunshine to cold rain and wind within the same day. Highland areas and exposed passes (Rannoch Moor, Devil's Staircase) can feel significantly colder due to wind chill. Midges are generally not yet active in May, which is a significant advantage over June-September.",
+    "alerts": [
+      "Scottish weather changes rapidly — always carry waterproofs and warm layers regardless of forecast",
+      "Wind chill on exposed sections (Rannoch Moor, Devil's Staircase, Lairigmor) can drop temperatures significantly",
+      "Snow is possible on higher ground in early May, though unlikely mid-month",
+      "UV can be strong despite cool temperatures — carry sunscreen",
+      "Midges typically not active until late May/early June — carry repellent as a precaution"
+    ]
+  },
+  "gear_checklist": [
+    {
+      "category": "Footwear & Clothing",
+      "item": "Broken-in waterproof hiking boots with ankle support",
+      "essential": true
+    },
+    {
+      "category": "Footwear & Clothing",
+      "item": "Waterproof jacket (Gore-Tex or equivalent)",
+      "essential": true
+    },
+    {
+      "category": "Footwear & Clothing",
+      "item": "Waterproof trousers",
+      "essential": true
+    },
+    {
+      "category": "Footwear & Clothing",
+      "item": "Moisture-wicking base layers (2-3 tops)",
+      "essential": true
+    },
+    {
+      "category": "Footwear & Clothing",
+      "item": "Insulating mid-layer (fleece or lightweight down)",
+      "essential": true
+    },
+    {
+      "category": "Footwear & Clothing",
+      "item": "Walking trousers (quick-dry, not jeans)",
+      "essential": true
+    },
+    {
+      "category": "Footwear & Clothing",
+      "item": "Warm hat and lightweight gloves",
+      "essential": true
+    },
+    {
+      "category": "Footwear & Clothing",
+      "item": "Merino wool hiking socks (3-4 pairs)",
+      "essential": true
+    },
+    {
+      "category": "Footwear & Clothing",
+      "item": "Gaiters for muddy/boggy sections",
+      "essential": false
+    },
+    {
+      "category": "Footwear & Clothing",
+      "item": "Camp shoes or sandals for evenings",
+      "essential": false
+    },
+    {
+      "category": "Footwear & Clothing",
+      "item": "Sun hat or cap",
+      "essential": false
+    },
+    {
+      "category": "Equipment",
+      "item": "Daypack (20-30 litres with rain cover)",
+      "essential": true
+    },
+    {
+      "category": "Equipment",
+      "item": "Trekking poles (adjustable)",
+      "essential": true
+    },
+    {
+      "category": "Equipment",
+      "item": "Water bottle or hydration bladder (minimum 1.5 litres)",
+      "essential": true
+    },
+    {
+      "category": "Equipment",
+      "item": "Headtorch with spare batteries",
+      "essential": true
+    },
+    {
+      "category": "Equipment",
+      "item": "Sit mat or lightweight sit pad",
+      "essential": false
+    },
+    {
+      "category": "Equipment",
+      "item": "Dry bags or zip-lock bags for electronics",
+      "essential": false
+    },
+    {
+      "category": "Navigation & Safety",
+      "item": "Fully charged mobile phone with offline maps (e.g., Maps.me, OS Maps app)",
+      "essential": true
+    },
+    {
+      "category": "Navigation & Safety",
+      "item": "Portable power bank",
+      "essential": true
+    },
+    {
+      "category": "Navigation & Safety",
+      "item": "Basic first aid kit (blister plasters, painkillers, antiseptic)",
+      "essential": true
+    },
+    {
+      "category": "Navigation & Safety",
+      "item": "Emergency whistle",
+      "essential": true
+    },
+    {
+      "category": "Navigation & Safety",
+      "item": "Paper map or guidebook as backup",
+      "essential": false
+    },
+    {
+      "category": "Navigation & Safety",
+      "item": "Compass",
+      "essential": false
+    },
+    {
+      "category": "Personal",
+      "item": "Sunscreen SPF 30+",
+      "essential": true
+    },
+    {
+      "category": "Personal",
+      "item": "Midge repellent (DEET-based or Smidge brand)",
+      "essential": true
+    },
+    {
+      "category": "Personal",
+      "item": "Personal medications",
+      "essential": true
+    },
+    {
+      "category": "Personal",
+      "item": "Midge head net",
+      "essential": false
+    },
+    {
+      "category": "Personal",
+      "item": "Camera",
+      "essential": false
+    },
+    {
+      "category": "Food & Drink",
+      "item": "High-energy snacks (trail mix, energy bars, chocolate)",
+      "essential": true
+    },
+    {
+      "category": "Food & Drink",
+      "item": "Packed lunch for remote stages (Days 3, 5, 6, 7)",
+      "essential": true
+    },
+    {
+      "category": "Food & Drink",
+      "item": "Water purification tablets or filter",
+      "essential": false
+    }
+  ],
+  "preparation": {
+    "overview": "The West Highland Way is a challenging 7-day trek covering 154 km through varied Scottish terrain. While no technical climbing is involved, the combination of distance, elevation gain, and rough ground (especially Day 3's lochside scramble) demands a reasonable level of fitness. A structured training programme starting 12–16 weeks before departure will make the difference between suffering through the days and genuinely enjoying them.",
+    "training_schedule": [
+      {
+        "weeks_before": "16–12 weeks",
+        "title": "Build Your Base",
+        "description": "Establish a regular walking habit and build general aerobic fitness.",
+        "activities": [
+          "Walk 3–4 times per week, starting at 5–8 km per walk",
+          "Include at least one longer walk (10–12 km) per week",
+          "Add stairs or inclines wherever possible",
+          "Begin wearing your hiking boots to break them in"
+        ]
+      },
+      {
+        "weeks_before": "12–8 weeks",
+        "title": "Increase Distance & Terrain",
+        "description": "Build toward trail-length distances and introduce rougher terrain and hills.",
+        "activities": [
+          "Extend your long walk to 15–20 km per week",
+          "Seek out hilly routes with 300–500m of elevation gain",
+          "Walk on trails, not just pavement — uneven ground builds ankle stability",
+          "Start carrying a loaded daypack (5–8 kg) on longer walks",
+          "Try back-to-back walking days to simulate consecutive trail days"
+        ]
+      },
+      {
+        "weeks_before": "8–4 weeks",
+        "title": "Peak Training",
+        "description": "Simulate trail conditions as closely as possible.",
+        "activities": [
+          "Complete at least two 20–25 km walks with full daypack",
+          "Do one back-to-back weekend: 20 km Saturday + 15 km Sunday",
+          "Include rough, rocky, or muddy terrain to prepare for Day 3",
+          "Practice walking in rain gear — you'll likely need it in Scotland",
+          "Test all your gear: boots, pack, poles, waterproofs, layers"
+        ]
+      },
+      {
+        "weeks_before": "4–1 weeks",
+        "title": "Taper & Fine-Tune",
+        "description": "Maintain fitness without fatiguing yourself before the trip.",
+        "activities": [
+          "Reduce distance by 30–40% but maintain frequency",
+          "Keep walks at moderate intensity — no need to push hard",
+          "One final 12–15 km walk 10 days before departure",
+          "Focus on rest, hydration, and nutrition in the final week",
+          "Finalise your gear — no new boots or untested equipment"
+        ]
+      }
+    ],
+    "physical_demands": "The WHW involves 7 consecutive days of walking between 14.5 km and 30.5 km per day, with total ascent across the week exceeding 3,500m. Day 3 (Rowardennan to Inverarnan) is the most technically demanding, with continuous scrambling over rocks and tree roots along Loch Lomond. Day 5 (Tyndrum to Kingshouse) is the longest at 30.5 km across exposed moorland. Day 6 includes the Devil's Staircase climb to 549m followed by a knee-testing 614m descent. Your feet, knees, and back will be under sustained load — conditioning these is the priority.",
+    "recommended_training": [
+      "Prioritise time on your feet over speed — the trail rewards endurance, not pace",
+      "Train on hills: stair climbers, incline treadmills, or local hills with 200–400m gain",
+      "Strengthen your core and legs: squats, lunges, step-ups, and calf raises 2–3 times per week",
+      "Practice using trekking poles — they reduce knee impact by up to 25% on descents",
+      "Break in your boots thoroughly — at least 80–100 km of walking before the trip",
+      "Build foot resilience: manage hot spots early, experiment with sock liners and blister prevention (Compeed, toe tape)",
+      "Walk in wet conditions at least twice — you need to know your rain gear works and how your boots perform when soaked"
+    ],
+    "what_to_expect": [
+      "Gentle introduction — flat to rolling terrain, good paths. Your body is fresh; enjoy it.",
+      "First real test — Conic Hill climb (361m) and 24 km total. Legs will feel yesterday's walk.",
+      "The toughest day physically — not distance but relentless rough terrain. Allow 8+ hours. Legs and feet will be tired.",
+      "Recovery day in disguise — easier terrain gives your body a chance to adapt. Soreness typically peaks today.",
+      "The long haul — 30.5 km across exposed moorland. Start early. Mental stamina matters as much as physical.",
+      "Short but dramatic — Devil's Staircase climb then long descent. Knees will protest. Use poles.",
+      "Final push — 25 km with meaningful ascent. Adrenaline carries you but fatigue is real. Savour the finish."
+    ]
+  },
+  "general_info": {
+    "visa_info": "US citizens do not need a visa for visits up to 6 months, but must obtain a UK Electronic Travel Authorisation (ETA) before travel. The ETA costs £16 per person, is valid for 2 years, and is linked to your passport. Apply at gov.uk/apply-electronic-travel-authorisation. EU, Canadian, and Australian citizens also qualify for visa-free entry (ETA requirements vary by nationality). Your passport must be valid for the duration of your stay.",
+    "health_insurance": "The UK has excellent emergency medical services via the NHS. EU citizens may use a GHIC/EHIC card for reduced-cost treatment. All other nationalities should carry comprehensive travel insurance that covers mountain rescue and helicopter evacuation — Scottish Mountain Rescue is volunteer-run and free, but hospital treatment may not be. Ensure your policy covers hiking and remote trail walking.",
+    "currency": "British Pound Sterling (GBP/£). Cards (contactless) widely accepted in towns and hotels, but carry cash (£50–100) for remote stops like Inversnaid, Inveroran, and Kingshouse where card machines can be unreliable. ATMs available in Milngavie, Drymen, Tyndrum, Kinlochleven, and Fort William.",
+    "language": "English. You'll encounter Scottish English and occasionally Scots dialect. Place names are often Gaelic — locals are happy to help with pronunciation. Key Gaelic: 'loch' (lake), 'ben/beinn' (mountain), 'glen' (valley), 'strath' (wide valley), 'bealach' (pass).",
+    "mobile_coverage": "Good coverage in towns (Milngavie, Drymen, Tyndrum, Kinlochleven, Fort William). Patchy to non-existent along Loch Lomond east shore (Day 3), Rannoch Moor (Day 5), and the Lairigmor (Day 7). Download offline maps before starting. EE and Vodafone generally have the best Highland coverage.",
+    "emergency_contacts": [
+      {
+        "service": "Emergency Services (Police, Ambulance, Mountain Rescue)",
+        "number": "999 or 112",
+        "notes": "Ask for Police, then Mountain Rescue if on the trail"
+      },
+      {
+        "service": "Non-emergency Police",
+        "number": "101",
+        "notes": "For non-urgent incidents"
+      },
+      {
+        "service": "NHS 24 (medical advice)",
+        "number": "111",
+        "notes": "24/7 health advice line"
+      }
+    ],
+    "transport": {
+      "getting_there": "Glasgow is the main gateway. From Glasgow, take the train to Milngavie (20 min, frequent service from Glasgow Queen Street). Glasgow is served by two airports: Glasgow Airport (GLA, 15 min to city centre) and Edinburgh Airport (EDI, 1 hr by bus/tram + train).",
+      "getting_back": "From Fort William, take the ScotRail train to Glasgow Queen Street (3 hr 45 min, scenic West Highland Line — one of the world's great railway journeys). Alternatively, Citylink bus to Glasgow (3 hr, multiple daily). Book train tickets in advance at scotrail.co.uk for best prices.",
+      "local_transport": "Citylink buses run along the A82 corridor (Glasgow–Fort William) with stops at Tyndrum, Kingshouse (A82 junction), and Kinlochleven. Useful for bail-out or rest day transport. West Highland Line trains stop at Milngavie, Crianlarich, Tyndrum, Bridge of Orchy, and Fort William."
+    },
+    "useful_apps": [
+      "OS Maps — Ordnance Survey maps with offline download, GPS tracking",
+      "Maps.me — Free offline maps with trail markings",
+      "what3words — Precise location sharing for emergencies",
+      "Met Office Weather — Most accurate UK weather forecasts",
+      "Trainline — Train tickets and live departures for ScotRail"
+    ],
+    "additional_notes": "Luggage transfer services (e.g., Travel-Lite, AMS) will transport your main bag between accommodations each day, so you only carry a daypack. Book well in advance for May. The Scottish Outdoor Access Code gives you the right to walk responsibly on most land — respect this privilege by following Leave No Trace principles. Midges are generally not active in early-mid May but carry Smidge repellent as a precaution. Ticks are present in bracken and long grass — check yourself each evening and carry a tick removal tool."
+  }
+}

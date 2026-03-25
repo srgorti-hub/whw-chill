@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="gpx_resample.py"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <rte>
+    <name>drymen-rowardennan_resampled</name>
+    <desc>Resampled from drymen-rowardennan.gpx | 22.80 km | ascent=448m descent=482m | 32 pts</desc>
+    <rtept lat="56.0683152800722" lon="-4.43978455824798">
+      <ele>59.9</ele>
+      <name>Drymen</name>
+    </rtept>
+    <rtept lat="56.0739014623177" lon="-4.43235179209813">
+      <ele>90.0</ele>
+    </rtept>
+    <rtept lat="56.0785065976197" lon="-4.43398083089311">
+      <ele>133.8</ele>
+    </rtept>
+    <rtept lat="56.0844638366784" lon="-4.44372958028122">
+      <ele>154.6</ele>
+    </rtept>
+    <rtept lat="56.0871446067451" lon="-4.47024396083705">
+      <ele>152.2</ele>
+      <name>Garadhban Forest</name>
+    </rtept>
+    <rtept lat="56.0890465577168" lon="-4.47178691092651">
+      <ele>156.2</ele>
+    </rtept>
+    <rtept lat="56.0894927877145" lon="-4.48304822185555">
+      <ele>139.3</ele>
+    </rtept>
+    <rtept lat="56.0918218421283" lon="-4.48461941996454">
+      <ele>160.3</ele>
+    </rtept>
+    <rtept lat="56.0979249731044" lon="-4.49149135207895">
+      <ele>179.1</ele>
+    </rtept>
+    <rtept lat="56.099042561685" lon="-4.50572420773567">
+      <ele>160.6</ele>
+    </rtept>
+    <rtept lat="56.1007470563198" lon="-4.51882075118075">
+      <ele>302.0</ele>
+    </rtept>
+    <rtept lat="56.0997979090294" lon="-4.5219025995342">
+      <ele>331.5</ele>
+    </rtept>
+    <rtept lat="56.0985489035595" lon="-4.52395319457995">
+      <ele>336.7</ele>
+      <name>Conic Hill</name>
+    </rtept>
+    <rtept lat="56.097028333883" lon="-4.52732533104178">
+      <ele>315.4</ele>
+    </rtept>
+    <rtept lat="56.0910803632093" lon="-4.53237458824168">
+      <ele>86.4</ele>
+    </rtept>
+    <rtept lat="56.0843523675945" lon="-4.54004906978064">
+      <ele>16.2</ele>
+    </rtept>
+    <rtept lat="56.0842891650564" lon="-4.54682201520169">
+      <ele>15.1</ele>
+    </rtept>
+    <rtept lat="56.0868894784597" lon="-4.54816883319325">
+      <ele>34.9</ele>
+    </rtept>
+    <rtept lat="56.0914043151639" lon="-4.55335956543163">
+      <ele>14.6</ele>
+    </rtept>
+    <rtept lat="56.091350073333" lon="-4.55597985977761">
+      <ele>13.8</ele>
+      <name>Balmaha</name>
+    </rtept>
+    <rtept lat="56.100520184095" lon="-4.56139935338953">
+      <ele>15.0</ele>
+    </rtept>
+    <rtept lat="56.1061536381505" lon="-4.57374979804485">
+      <ele>40.2</ele>
+    </rtept>
+    <rtept lat="56.1071784505504" lon="-4.57589633463318">
+      <ele>35.6</ele>
+      <name>Milarrochy Bay</name>
+    </rtept>
+    <rtept lat="56.1124830530322" lon="-4.58104793174298">
+      <ele>18.4</ele>
+    </rtept>
+    <rtept lat="56.1207238129796" lon="-4.59662981613068">
+      <ele>15.8</ele>
+    </rtept>
+    <rtept lat="56.1229475923363" lon="-4.59987081737675">
+      <ele>30.1</ele>
+    </rtept>
+    <rtept lat="56.1277999338953" lon="-4.61177097305817">
+      <ele>12.6</ele>
+    </rtept>
+    <rtept lat="56.1279389492002" lon="-4.61530965864745">
+      <ele>19.2</ele>
+    </rtept>
+    <rtept lat="56.1286854739912" lon="-4.61973781770042">
+      <ele>75.5</ele>
+    </rtept>
+    <rtept lat="56.1375244948301" lon="-4.62802893933828">
+      <ele>15.6</ele>
+    </rtept>
+    <rtept lat="56.1415824809508" lon="-4.63550387649146">
+      <ele>19.2</ele>
+      <name>Rowardennan</name>
+    </rtept>
+    <rtept lat="56.1495311177814" lon="-4.64108506561722">
+      <ele>25.9</ele>
+      <name>end_26m</name>
+    </rtept>
+  </rte>
+</gpx>

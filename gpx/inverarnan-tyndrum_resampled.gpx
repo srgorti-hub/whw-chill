@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="gpx_resample.py"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <rte>
+    <name>inverarnan-tyndrum_resampled</name>
+    <desc>Resampled from inverarnan-tyndrum.gpx | 19.20 km | ascent=430m descent=227m | 38 pts</desc>
+    <rtept lat="56.3299649701035" lon="-4.71677931782623">
+      <ele>32.0</ele>
+      <name>Inverarnan</name>
+    </rtept>
+    <rtept lat="56.3388491444595" lon="-4.7161568810591">
+      <ele>45.7</ele>
+    </rtept>
+    <rtept lat="56.3411983987998" lon="-4.71461168611697">
+      <ele>75.2</ele>
+    </rtept>
+    <rtept lat="56.3443412866145" lon="-4.70727507568599">
+      <ele>79.4</ele>
+    </rtept>
+    <rtept lat="56.3450504283608" lon="-4.70295534359398">
+      <ele>95.8</ele>
+    </rtept>
+    <rtept lat="56.3494509553586" lon="-4.69553587421972">
+      <ele>103.2</ele>
+    </rtept>
+    <rtept lat="56.3496290911691" lon="-4.69230456337325">
+      <ele>132.6</ele>
+    </rtept>
+    <rtept lat="56.3511890912586" lon="-4.68751938703118">
+      <ele>142.8</ele>
+    </rtept>
+    <rtept lat="56.3533841501371" lon="-4.68328352875918">
+      <ele>142.8</ele>
+    </rtept>
+    <rtept lat="56.3550679915814" lon="-4.68173112351181">
+      <ele>121.8</ele>
+    </rtept>
+    <rtept lat="56.3559295620152" lon="-4.68029571267795">
+      <ele>121.8</ele>
+    </rtept>
+    <rtept lat="56.3587152133176" lon="-4.67367170771824">
+      <ele>147.5</ele>
+    </rtept>
+    <rtept lat="56.3606494490648" lon="-4.66850280509381">
+      <ele>138.3</ele>
+    </rtept>
+    <rtept lat="56.370658189081" lon="-4.65697805787998">
+      <ele>156.6</ele>
+    </rtept>
+    <rtept lat="56.3724770504722" lon="-4.65665767997256">
+      <ele>176.0</ele>
+    </rtept>
+    <rtept lat="56.3763901330362" lon="-4.65172080947574">
+      <ele>188.4</ele>
+    </rtept>
+    <rtept lat="56.378180382426" lon="-4.65172861170471">
+      <ele>206.6</ele>
+    </rtept>
+    <rtept lat="56.385678586533" lon="-4.63747360444336">
+      <ele>217.2</ele>
+    </rtept>
+    <rtept lat="56.3896634332377" lon="-4.63267419158492">
+      <ele>251.5</ele>
+      <name>Crianlarich</name>
+    </rtept>
+    <rtept lat="56.3913499397103" lon="-4.63320708493753">
+      <ele>258.3</ele>
+    </rtept>
+    <rtept lat="56.3920715536954" lon="-4.63858018635545">
+      <ele>313.4</ele>
+    </rtept>
+    <rtept lat="56.3935871953471" lon="-4.64400856171431">
+      <ele>340.9</ele>
+    </rtept>
+    <rtept lat="56.3942571288748" lon="-4.64799301817963">
+      <ele>340.9</ele>
+    </rtept>
+    <rtept lat="56.3944651803913" lon="-4.65024387645575">
+      <ele>329.5</ele>
+    </rtept>
+    <rtept lat="56.3984431473303" lon="-4.65146856979278">
+      <ele>247.1</ele>
+    </rtept>
+    <rtept lat="56.4055309216369" lon="-4.65731116497596">
+      <ele>251.9</ele>
+    </rtept>
+    <rtept lat="56.4071945422642" lon="-4.65706241539715">
+      <ele>226.9</ele>
+    </rtept>
+    <rtept lat="56.4095124569619" lon="-4.66213637477818">
+      <ele>229.5</ele>
+    </rtept>
+    <rtept lat="56.411856738146" lon="-4.65969793026484">
+      <ele>182.5</ele>
+    </rtept>
+    <rtept lat="56.4169129120529" lon="-4.66219138265321">
+      <ele>165.6</ele>
+    </rtept>
+    <rtept lat="56.424067296045" lon="-4.66867612642211">
+      <ele>179.2</ele>
+    </rtept>
+    <rtept lat="56.4230908453749" lon="-4.67707358687556">
+      <ele>172.9</ele>
+    </rtept>
+    <rtept lat="56.4249616752385" lon="-4.69340790952736">
+      <ele>181.0</ele>
+    </rtept>
+    <rtept lat="56.4248312473492" lon="-4.6981670784441">
+      <ele>196.9</ele>
+    </rtept>
+    <rtept lat="56.4276830845435" lon="-4.70155643789223">
+      <ele>198.9</ele>
+    </rtept>
+    <rtept lat="56.4318329116978" lon="-4.70786117613118">
+      <ele>229.4</ele>
+    </rtept>
+    <rtept lat="56.4342503272319" lon="-4.71445748721692">
+      <ele>242.7</ele>
+      <name>Tyndrum</name>
+    </rtept>
+    <rtept lat="56.4383825832714" lon="-4.71353531442636">
+      <ele>235.2</ele>
+      <name>end_235m</name>
+    </rtept>
+  </rte>
+</gpx>

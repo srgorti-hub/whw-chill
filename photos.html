@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Manager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+/* ===============================
+   CSS CUSTOM PROPERTIES
+=============================== */
+:root {
+  --bg: #F5F3EF;
+  --surface: #FFFFFF;
+  --surface2: #F0EDE7;
+  --green: #2C4A1E;
+  --green-mid: #3D6B2C;
+  --green-light: #EBF2E5;
+  --amber: #D4721A;
+  --amber-light: #FDF1E6;
+  --text: #1C1C1A;
+  --muted: #6B7569;
+  --border: #DDD9D0;
+  --radius: 10px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.07);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+  --danger: #C53030;
+  --danger-light: #FFF5F5;
+}
+
+/* ===============================
+   RESET & BASE
+=============================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ===============================
+   LAYOUT
+=============================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===============================
+   HEADER
+=============================== */
+.header {
+  background: var(--green);
+  color: #fff;
+  padding: 40px 0 36px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.header .trip-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 16px;
+}
+
+.header .instructions {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.header .day-count {
+  display: inline-block;
+  margin-top: 12px;
+  background: rgba(255,255,255,0.15);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* ===============================
+   ERROR STATE
+=============================== */
+.error-banner {
+  background: var(--danger-light);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  margin: 32px auto;
+  max-width: 600px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.error-banner code {
+  background: rgba(197,48,48,0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* ===============================
+   DROP ZONES
+=============================== */
+.photo-grid {
+  padding: 32px 0 48px;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+
+.drop-zone-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.drop-zone-card.hero-card {
+  margin-bottom: 40px;
+}
+
+.drop-zone-label {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.drop-zone-sublabel {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.drop-zone {
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+  position: relative;
+}
+
+.drop-zone:hover {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+}
+
+.drop-zone.drag-over {
+  border-color: var(--green);
+  background: var(--green-light);
+  border-style: solid;
+}
+
+.drop-zone.has-photos {
+  padding: 16px;
+  border-style: solid;
+  border-color: var(--border);
+  cursor: default;
+}
+
+.drop-zone-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  opacity: 0.35;
+}
+
+.drop-zone-text {
+  font-size: 0.95rem;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.drop-zone-text strong {
+  color: var(--green);
+  pointer-events: none;
+}
+
+.drop-zone-hint {
+  font-size: 0.8rem;
+  color: var(--muted);
+  opacity: 0.7;
+  margin-top: 6px;
+  pointer-events: none;
+}
+
+/* Hidden file input */
+.file-input {
+  display: none;
+}
+
+/* ===============================
+   THUMBNAILS
+=============================== */
+.thumbnail-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.thumbnail-wrapper {
+  position: relative;
+  width: 140px;
+  height: 105px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  flex-shrink: 0;
+}
+
+.hero-card .thumbnail-wrapper {
+  width: 240px;
+  height: 160px;
+}
+
+.thumbnail-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbnail-badge {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.thumbnail-remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  padding: 0;
+}
+
+.thumbnail-remove:hover {
+  background: var(--danger);
+}
+
+.add-more-btn {
+  width: 140px;
+  height: 105px;
+  border: 2px dashed var(--border);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  transition: border-color 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+
+.add-more-btn:hover {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+}
+
+.add-more-btn .plus-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+/* ===============================
+   DOWNLOAD BAR
+=============================== */
+.download-bar {
+  position: sticky;
+  bottom: 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+  padding: 16px 0;
+  z-index: 100;
+}
+
+.download-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.photo-count {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.photo-count strong {
+  color: var(--text);
+}
+
+.download-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.download-btn:hover:not(:disabled) {
+  background: var(--green-mid);
+}
+
+.download-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.download-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.download-btn.generating {
+  pointer-events: none;
+}
+
+/* ===============================
+   PREVIEW MODAL
+=============================== */
+.preview-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.preview-overlay.active {
+  display: flex;
+}
+
+.preview-overlay img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.preview-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.preview-close:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+/* ===============================
+   LOADING STATE
+=============================== */
+.loading {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--muted);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--green);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===============================
+   BACK LINK
+=============================== */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  transition: color 0.15s;
+}
+
+.back-link:hover {
+  color: #fff;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 768px) {
+  .header {
+    padding: 28px 0 24px;
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .thumbnail-wrapper {
+    width: 110px;
+    height: 82px;
+  }
+
+  .hero-card .thumbnail-wrapper {
+    width: 180px;
+    height: 120px;
+  }
+
+  .add-more-btn {
+    width: 110px;
+    height: 82px;
+  }
+
+  .drop-zone {
+    padding: 28px 16px;
+  }
+
+  .download-bar-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .thumbnail-wrapper,
+  .hero-card .thumbnail-wrapper {
+    width: calc(50% - 6px);
+    height: 90px;
+  }
+
+  .add-more-btn {
+    width: calc(50% - 6px);
+    height: 90px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER (rendered by JS) -->
+<header class="header" id="header">
+  <div class="container">
+    <a href="index.html" class="back-link">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back to Guide
+    </a>
+    <h1>Photo Manager</h1>
+    <div class="trip-name" id="tripName">Loading...</div>
+    <p class="instructions">Drag and drop photos into each slot below, or click to browse. When you're done, download the organized zip file and extract it into the trip folder.</p>
+    <div class="day-count" id="dayCount"></div>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+  <!-- Loading state -->
+  <div class="loading" id="loadingState">
+    <div class="loading-spinner"></div>
+    <p>Loading trip data...</p>
+  </div>
+
+  <!-- Error state (hidden by default) -->
+  <div class="error-banner" id="errorBanner" style="display:none;"></div>
+
+  <!-- Photo grid (built by JS) -->
+  <div class="photo-grid" id="photoGrid" style="display:none;"></div>
+</main>
+
+<!-- DOWNLOAD BAR -->
+<div class="download-bar" id="downloadBar" style="display:none;">
+  <div class="container">
+    <div class="download-bar-inner">
+      <div class="photo-count" id="photoCount">
+        <strong>0</strong> photos assigned
+      </div>
+      <button class="download-btn" id="downloadBtn" disabled>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Photos
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- PREVIEW MODAL -->
+<div class="preview-overlay" id="previewOverlay">
+  <button class="preview-close" id="previewClose" aria-label="Close preview">&times;</button>
+  <img id="previewImage" src="" alt="Photo preview">
+</div>
+
+<script>
+/* ===============================
+   STATE
+=============================== */
+const state = {
+  tripData: null,
+  // { 'hero': [File, ...], 'day-1': [File, ...], 'day-2': [File, ...] }
+  photos: {},
+  // Corresponding object URLs for preview
+  urls: {}
+};
+
+const MAX_PHOTOS_HERO = 1;
+const MAX_PHOTOS_DAY = 3;
+
+/* ===============================
+   INIT
+=============================== */
+async function init() {
+  try {
+    const resp = await fetch('trip-data.json');
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    state.tripData = await resp.json();
+    renderHeader();
+    buildPhotoGrid();
+    document.getElementById('loadingState').style.display = 'none';
+    document.getElementById('photoGrid').style.display = 'block';
+    document.getElementById('downloadBar').style.display = 'block';
+  } catch (err) {
+    document.getElementById('loadingState').style.display = 'none';
+    const banner = document.getElementById('errorBanner');
+    banner.style.display = 'block';
+    banner.innerHTML = `Could not load <code>trip-data.json</code>. Make sure the file exists in the same folder as this page and that you are serving it from an HTTP server (e.g., <code>python -m http.server</code>).`;
+  }
+}
+
+/* ===============================
+   RENDER HEADER
+=============================== */
+function renderHeader() {
+  const trip = state.tripData.trip;
+  const days = state.tripData.days;
+  document.title = `Photo Manager — ${trip.name}`;
+  document.getElementById('tripName').textContent = `${trip.name} — ${trip.destination}`;
+  document.getElementById('dayCount').textContent = `${days.length} days`;
+}
+
+/* ===============================
+   BUILD PHOTO GRID
+=============================== */
+function buildPhotoGrid() {
+  const grid = document.getElementById('photoGrid');
+  const days = state.tripData.days;
+
+  // Initialize state buckets
+  state.photos['hero'] = [];
+  state.urls['hero'] = [];
+
+  // Hero section
+  let html = `
+    <h2 class="section-title">Hero Image</h2>
+    <div class="drop-zone-card hero-card" data-slot="hero">
+      <div class="drop-zone-label">Hero Image</div>
+      <div class="drop-zone-sublabel">This appears as the main banner at the top of the guide. 1 photo allowed.</div>
+      <div class="thumbnail-grid" id="thumbs-hero"></div>
+      <div class="drop-zone" id="zone-hero" data-slot="hero">
+        <svg class="drop-zone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <path d="M21 15l-5-5L5 21"/>
+        </svg>
+        <div class="drop-zone-text"><strong>Drop hero image here</strong> or click to browse</div>
+        <div class="drop-zone-hint">Accepts JPG, PNG, WebP</div>
+      </div>
+      <input type="file" class="file-input" id="input-hero" accept="image/*" data-slot="hero">
+    </div>
+
+    <h2 class="section-title">Day Photos</h2>
+  `;
+
+  // Day sections
+  days.forEach(day => {
+    const slot = `day-${day.day}`;
+    state.photos[slot] = [];
+    state.urls[slot] = [];
+
+    html += `
+      <div class="drop-zone-card" data-slot="${slot}">
+        <div class="drop-zone-label">Day ${day.day} &mdash; ${escapeHtml(day.label)}</div>
+        <div class="drop-zone-sublabel">${day.distance_km} km &middot; ${day.difficulty} &middot; Up to 3 photos (1 main + 2 thumbnails)</div>
+        <div class="thumbnail-grid" id="thumbs-${slot}"></div>
+        <div class="drop-zone" id="zone-${slot}" data-slot="${slot}">
+          <svg class="drop-zone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <path d="M21 15l-5-5L5 21"/>
+          </svg>
+          <div class="drop-zone-text"><strong>Drop photos here</strong> or click to browse</div>
+          <div class="drop-zone-hint">Accepts JPG, PNG, WebP</div>
+        </div>
+        <input type="file" class="file-input" id="input-${slot}" accept="image/*" multiple data-slot="${slot}">
+      </div>
+    `;
+  });
+
+  grid.innerHTML = html;
+
+  // Attach event listeners
+  attachDropZoneListeners();
+}
+
+/* ===============================
+   DROP ZONE LISTENERS
+=============================== */
+function attachDropZoneListeners() {
+  const allSlots = Object.keys(state.photos);
+
+  allSlots.forEach(slot => {
+    const zone = document.getElementById(`zone-${slot}`);
+    const input = document.getElementById(`input-${slot}`);
+
+    // Drag events
+    zone.addEventListener('dragenter', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      zone.classList.add('drag-over');
+    });
+
+    zone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      zone.classList.add('drag-over');
+    });
+
+    zone.addEventListener('dragleave', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      // Only remove if we actually left the zone (not entering a child)
+      if (!zone.contains(e.relatedTarget)) {
+        zone.classList.remove('drag-over');
+      }
+    });
+
+    zone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      zone.classList.remove('drag-over');
+      handleFiles(slot, e.dataTransfer.files);
+    });
+
+    // Click to browse
+    zone.addEventListener('click', () => {
+      input.click();
+    });
+
+    // File input change
+    input.addEventListener('change', () => {
+      handleFiles(slot, input.files);
+      input.value = ''; // Reset so same file can be re-selected
+    });
+  });
+}
+
+/* ===============================
+   HANDLE FILES
+=============================== */
+function handleFiles(slot, fileList) {
+  const maxPhotos = slot === 'hero' ? MAX_PHOTOS_HERO : MAX_PHOTOS_DAY;
+  const currentCount = state.photos[slot].length;
+  const remaining = maxPhotos - currentCount;
+
+  if (remaining <= 0) return;
+
+  const files = Array.from(fileList);
+
+  // Filter to images only
+  const imageFiles = files.filter(f => f.type.startsWith('image/'));
+  if (imageFiles.length === 0) return;
+
+  // Take only as many as we have room for
+  const toAdd = imageFiles.slice(0, remaining);
+
+  toAdd.forEach(file => {
+    const url = URL.createObjectURL(file);
+    state.photos[slot].push(file);
+    state.urls[slot].push(url);
+  });
+
+  renderThumbnails(slot);
+  updatePhotoCount();
+  updateZoneVisibility(slot);
+}
+
+/* ===============================
+   RENDER THUMBNAILS
+=============================== */
+function renderThumbnails(slot) {
+  const container = document.getElementById(`thumbs-${slot}`);
+  const photos = state.photos[slot];
+  const urls = state.urls[slot];
+  const maxPhotos = slot === 'hero' ? MAX_PHOTOS_HERO : MAX_PHOTOS_DAY;
+
+  if (photos.length === 0) {
+    container.innerHTML = '';
+    return;
+  }
+
+  let html = '';
+  photos.forEach((file, idx) => {
+    const label = slot === 'hero' ? 'hero' : (idx === 0 ? 'main' : `thumb ${idx}`);
+    html += `
+      <div class="thumbnail-wrapper">
+        <img src="${urls[idx]}" alt="${escapeHtml(file.name)}" loading="lazy" data-slot="${slot}" data-index="${idx}">
+        <span class="thumbnail-badge">${label}</span>
+        <button class="thumbnail-remove" data-slot="${slot}" data-index="${idx}" aria-label="Remove photo">&times;</button>
+      </div>
+    `;
+  });
+
+  // "Add more" button if room remains
+  if (photos.length < maxPhotos) {
+    html += `
+      <button class="add-more-btn" data-slot="${slot}" aria-label="Add more photos">
+        <span class="plus-icon">+</span>
+        Add
+      </button>
+    `;
+  }
+
+  container.innerHTML = html;
+
+  // Attach remove listeners
+  container.querySelectorAll('.thumbnail-remove').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const s = btn.dataset.slot;
+      const i = parseInt(btn.dataset.index);
+      removePhoto(s, i);
+    });
+  });
+
+  // Attach preview listeners
+  container.querySelectorAll('.thumbnail-wrapper img').forEach(img => {
+    img.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openPreview(img.src);
+    });
+    img.style.cursor = 'pointer';
+  });
+
+  // Attach "add more" listener
+  const addBtn = container.querySelector('.add-more-btn');
+  if (addBtn) {
+    addBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const input = document.getElementById(`input-${addBtn.dataset.slot}`);
+      input.click();
+    });
+  }
+}
+
+/* ===============================
+   REMOVE PHOTO
+=============================== */
+function removePhoto(slot, index) {
+  // Revoke the object URL to free memory
+  URL.revokeObjectURL(state.urls[slot][index]);
+  state.photos[slot].splice(index, 1);
+  state.urls[slot].splice(index, 1);
+  renderThumbnails(slot);
+  updatePhotoCount();
+  updateZoneVisibility(slot);
+}
+
+/* ===============================
+   ZONE VISIBILITY
+=============================== */
+function updateZoneVisibility(slot) {
+  const zone = document.getElementById(`zone-${slot}`);
+  const maxPhotos = slot === 'hero' ? MAX_PHOTOS_HERO : MAX_PHOTOS_DAY;
+  const count = state.photos[slot].length;
+
+  if (count >= maxPhotos) {
+    zone.style.display = 'none';
+  } else if (count > 0) {
+    // Has some photos but not full -- hide drop zone, the "add more" button handles it
+    zone.style.display = 'none';
+  } else {
+    zone.style.display = '';
+  }
+}
+
+/* ===============================
+   PHOTO COUNT
+=============================== */
+function updatePhotoCount() {
+  const total = Object.values(state.photos).reduce((sum, arr) => sum + arr.length, 0);
+  const countEl = document.getElementById('photoCount');
+  countEl.innerHTML = `<strong>${total}</strong> photo${total !== 1 ? 's' : ''} assigned`;
+  document.getElementById('downloadBtn').disabled = total === 0;
+}
+
+/* ===============================
+   PREVIEW MODAL
+=============================== */
+function openPreview(src) {
+  const overlay = document.getElementById('previewOverlay');
+  const img = document.getElementById('previewImage');
+  img.src = src;
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePreview() {
+  const overlay = document.getElementById('previewOverlay');
+  overlay.classList.remove('active');
+  document.getElementById('previewImage').src = '';
+  document.body.style.overflow = '';
+}
+
+document.getElementById('previewClose').addEventListener('click', closePreview);
+document.getElementById('previewOverlay').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) closePreview();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closePreview();
+});
+
+/* ===============================
+   ZIP EXPORT
+=============================== */
+document.getElementById('downloadBtn').addEventListener('click', generateZip);
+
+async function generateZip() {
+  const btn = document.getElementById('downloadBtn');
+  const originalContent = btn.innerHTML;
+  btn.classList.add('generating');
+  btn.innerHTML = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 0.8s linear infinite;"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg>
+    Generating...
+  `;
+
+  try {
+    const zip = new JSZip();
+    const photosFolder = zip.folder('photos');
+
+    // Process each slot
+    const slots = Object.keys(state.photos);
+    for (const slot of slots) {
+      const files = state.photos[slot];
+      if (files.length === 0) continue;
+
+      if (slot === 'hero') {
+        const heroFolder = photosFolder.folder('hero');
+        const ext = getExtension(files[0].name);
+        const data = await readFileAsArrayBuffer(files[0]);
+        heroFolder.file(`hero${ext}`, data);
+      } else {
+        const dayFolder = photosFolder.folder(slot);
+        for (let i = 0; i < files.length; i++) {
+          const ext = getExtension(files[i].name);
+          const data = await readFileAsArrayBuffer(files[i]);
+          dayFolder.file(`img${i + 1}${ext}`, data);
+        }
+      }
+    }
+
+    const blob = await zip.generateAsync({ type: 'blob' });
+
+    // Trigger download
+    const tripName = state.tripData.trip.name.toLowerCase().replace(/\s+/g, '-');
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `${tripName}-photos.zip`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+  } catch (err) {
+    console.error('Zip generation failed:', err);
+    alert('Failed to generate zip file. Check the console for details.');
+  } finally {
+    btn.classList.remove('generating');
+    btn.innerHTML = originalContent;
+  }
+}
+
+function readFileAsArrayBuffer(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsArrayBuffer(file);
+  });
+}
+
+function getExtension(filename) {
+  const dot = filename.lastIndexOf('.');
+  if (dot === -1) return '.jpg';
+  return filename.substring(dot).toLowerCase();
+}
+
+/* ===============================
+   UTILITY
+=============================== */
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+/* ===============================
+   BOOT
+=============================== */
+init();
+</script>
+</body>
+</html>

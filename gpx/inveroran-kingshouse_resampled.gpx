@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="gpx_resample.py"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <rte>
+    <name>inveroran-kingshouse_resampled</name>
+    <desc>Resampled from inveroran-kingshouse.gpx | 15.54 km | ascent=288m descent=225m | 30 pts</desc>
+    <rtept lat="56.5327340055732" lon="-4.80761853236573">
+      <ele>184.5</ele>
+      <name>Inveroran</name>
+    </rtept>
+    <rtept lat="56.5320674185372" lon="-4.81046444058499">
+      <ele>184.1</ele>
+    </rtept>
+    <rtept lat="56.5330787651211" lon="-4.81343472863334">
+      <ele>173.0</ele>
+    </rtept>
+    <rtept lat="56.5353124457823" lon="-4.81283590964045">
+      <ele>170.0</ele>
+    </rtept>
+    <rtept lat="56.542981261332" lon="-4.81156638408487">
+      <ele>179.4</ele>
+    </rtept>
+    <rtept lat="56.550145553086" lon="-4.80039740388204">
+      <ele>212.6</ele>
+    </rtept>
+    <rtept lat="56.5523494835352" lon="-4.79792385697921">
+      <ele>231.3</ele>
+    </rtept>
+    <rtept lat="56.5542939255924" lon="-4.79699328185125">
+      <ele>253.9</ele>
+    </rtept>
+    <rtept lat="56.5589006226526" lon="-4.79438724383417">
+      <ele>279.7</ele>
+    </rtept>
+    <rtept lat="56.570699934922" lon="-4.79048724173975">
+      <ele>302.6</ele>
+    </rtept>
+    <rtept lat="56.5765611199156" lon="-4.79764473427699">
+      <ele>326.0</ele>
+    </rtept>
+    <rtept lat="56.5808617162212" lon="-4.79825572091388">
+      <ele>326.0</ele>
+    </rtept>
+    <rtept lat="56.5839847924942" lon="-4.79926842050552">
+      <ele>311.1</ele>
+    </rtept>
+    <rtept lat="56.5975737202799" lon="-4.80729642277654">
+      <ele>317.8</ele>
+    </rtept>
+    <rtept lat="56.6033024491426" lon="-4.80794976729429">
+      <ele>348.9</ele>
+    </rtept>
+    <rtept lat="56.6094262783189" lon="-4.80384084997721">
+      <ele>353.7</ele>
+    </rtept>
+    <rtept lat="56.6112255735066" lon="-4.80177384154836">
+      <ele>364.4</ele>
+    </rtept>
+    <rtept lat="56.61428328749" lon="-4.79970202662383">
+      <ele>398.8</ele>
+    </rtept>
+    <rtept lat="56.6173023248124" lon="-4.79974629838856">
+      <ele>421.0</ele>
+    </rtept>
+    <rtept lat="56.621504135048" lon="-4.80194880148881">
+      <ele>443.5</ele>
+    </rtept>
+    <rtept lat="56.6239442534772" lon="-4.80335258781585">
+      <ele>440.8</ele>
+    </rtept>
+    <rtept lat="56.6275602574375" lon="-4.80641905773756">
+      <ele>411.0</ele>
+    </rtept>
+    <rtept lat="56.6283104002048" lon="-4.80942143231064">
+      <ele>407.8</ele>
+    </rtept>
+    <rtept lat="56.6337456055756" lon="-4.82275890448825">
+      <ele>348.0</ele>
+    </rtept>
+    <rtept lat="56.6360443454715" lon="-4.823927242861">
+      <ele>323.2</ele>
+    </rtept>
+    <rtept lat="56.6411586469411" lon="-4.82717249799566">
+      <ele>299.5</ele>
+    </rtept>
+    <rtept lat="56.647055273299" lon="-4.83249222421585">
+      <ele>283.0</ele>
+    </rtept>
+    <rtept lat="56.6486528325262" lon="-4.83519976855203">
+      <ele>271.4</ele>
+    </rtept>
+    <rtept lat="56.6511012237759" lon="-4.84055937239132">
+      <ele>271.4</ele>
+    </rtept>
+    <rtept lat="56.6515226044103" lon="-4.84052744172808">
+      <ele>248.3</ele>
+      <name>Kingshouse Hotel</name>
+    </rtept>
+  </rte>
+</gpx>

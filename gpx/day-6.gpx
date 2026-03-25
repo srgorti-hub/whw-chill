@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="gpx_resample.py"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <rte>
+    <name>kingshouse-kinlochleven_resampled</name>
+    <desc>Resampled from kingshouse-kinlochleven.gpx | 13.89 km | ascent=319m descent=555m | 30 pts</desc>
+    <rtept lat="56.6514890308157" lon="-4.84048248350521">
+      <ele>248.3</ele>
+      <name>Kingshouse Hotel</name>
+    </rtept>
+    <rtept lat="56.6539320982328" lon="-4.85532333900096">
+      <ele>243.4</ele>
+    </rtept>
+    <rtept lat="56.6564750786818" lon="-4.86083256339562">
+      <ele>260.4</ele>
+    </rtept>
+    <rtept lat="56.6586713839256" lon="-4.86452424144443">
+      <ele>289.3</ele>
+    </rtept>
+    <rtept lat="56.6590055063327" lon="-4.86828047116665">
+      <ele>293.1</ele>
+    </rtept>
+    <rtept lat="56.660656032534" lon="-4.88785437395929">
+      <ele>275.8</ele>
+    </rtept>
+    <rtept lat="56.6648677068186" lon="-4.90501248917389">
+      <ele>285.3</ele>
+    </rtept>
+    <rtept lat="56.6716820391699" lon="-4.91112083525769">
+      <ele>394.5</ele>
+    </rtept>
+    <rtept lat="56.6746925499117" lon="-4.91452727466856">
+      <ele>506.1</ele>
+      <name>Devil's Staircase</name>
+    </rtept>
+    <rtept lat="56.6756880080195" lon="-4.91416334446143">
+      <ele>527.6</ele>
+    </rtept>
+    <rtept lat="56.6768425675158" lon="-4.91460525396813">
+      <ele>542.3</ele>
+    </rtept>
+    <rtept lat="56.6779637933562" lon="-4.91577942031633">
+      <ele>542.3</ele>
+    </rtept>
+    <rtept lat="56.6820362987702" lon="-4.91873992390359">
+      <ele>465.7</ele>
+    </rtept>
+    <rtept lat="56.6900302600012" lon="-4.9159188894229">
+      <ele>468.9</ele>
+    </rtept>
+    <rtept lat="56.6901188865962" lon="-4.91766044580987">
+      <ele>451.3</ele>
+    </rtept>
+    <rtept lat="56.6919471785655" lon="-4.92041885080965">
+      <ele>420.9</ele>
+    </rtept>
+    <rtept lat="56.6938140589486" lon="-4.92015184447178">
+      <ele>381.5</ele>
+    </rtept>
+    <rtept lat="56.6961925447878" lon="-4.929099290034">
+      <ele>381.5</ele>
+    </rtept>
+    <rtept lat="56.6984455849115" lon="-4.93647947225964">
+      <ele>369.6</ele>
+    </rtept>
+    <rtept lat="56.7006052307634" lon="-4.93820651697195">
+      <ele>315.4</ele>
+    </rtept>
+    <rtept lat="56.6981003644573" lon="-4.94424573808775">
+      <ele>273.9</ele>
+    </rtept>
+    <rtept lat="56.6984909119999" lon="-4.94483501543969">
+      <ele>247.5</ele>
+    </rtept>
+    <rtept lat="56.6991448548701" lon="-4.9486504826468">
+      <ele>175.8</ele>
+    </rtept>
+    <rtept lat="56.7038441101103" lon="-4.95107716722157">
+      <ele>132.1</ele>
+    </rtept>
+    <rtept lat="56.7058015264057" lon="-4.95040690545872">
+      <ele>130.9</ele>
+    </rtept>
+    <rtept lat="56.7086263708144" lon="-4.94795126736185">
+      <ele>91.1</ele>
+    </rtept>
+    <rtept lat="56.7114529859742" lon="-4.95361497257414">
+      <ele>78.4</ele>
+    </rtept>
+    <rtept lat="56.713191672205" lon="-4.9546633562891">
+      <ele>32.7</ele>
+      <name>Kinlochleven</name>
+    </rtept>
+    <rtept lat="56.7133934872041" lon="-4.95638556677006">
+      <ele>24.0</ele>
+    </rtept>
+    <rtept lat="56.7144139412849" lon="-4.96314427448231">
+      <ele>12.6</ele>
+      <name>end_13m</name>
+    </rtept>
+  </rte>
+</gpx>

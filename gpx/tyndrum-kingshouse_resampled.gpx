@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="gpx_resample.py"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <rte>
+    <name>tyndrum-kingshouse_resampled</name>
+    <desc>Resampled from tyndrum-kingshouse.gpx | 29.71 km | ascent=571m descent=558m | 31 pts</desc>
+    <rtept lat="56.4383825406574" lon="-4.7135580187669">
+      <ele>235.1</ele>
+      <name>Tyndrum</name>
+    </rtept>
+    <rtept lat="56.4544763738496" lon="-4.71085907507143">
+      <ele>327.2</ele>
+    </rtept>
+    <rtept lat="56.4618005481214" lon="-4.71337805586948">
+      <ele>332.0</ele>
+    </rtept>
+    <rtept lat="56.4646346230329" lon="-4.71653526483733">
+      <ele>294.4</ele>
+    </rtept>
+    <rtept lat="56.4746603781476" lon="-4.72004512059821">
+      <ele>242.5</ele>
+    </rtept>
+    <rtept lat="56.4806182401481" lon="-4.71805136306422">
+      <ele>230.6</ele>
+    </rtept>
+    <rtept lat="56.4838712000202" lon="-4.71849523749731">
+      <ele>203.5</ele>
+    </rtept>
+    <rtept lat="56.4905827121303" lon="-4.73497909259251">
+      <ele>196.4</ele>
+    </rtept>
+    <rtept lat="56.4965576385075" lon="-4.74403806513088">
+      <ele>213.5</ele>
+    </rtept>
+    <rtept lat="56.5119036597717" lon="-4.7584940598314">
+      <ele>220.3</ele>
+    </rtept>
+    <rtept lat="56.5185202701597" lon="-4.77175497290696">
+      <ele>159.7</ele>
+    </rtept>
+    <rtept lat="56.5251858484201" lon="-4.77956004128185">
+      <ele>222.7</ele>
+      <name>Bridge of Orchy</name>
+    </rtept>
+    <rtept lat="56.5283456972304" lon="-4.78655731425487">
+      <ele>306.0</ele>
+    </rtept>
+    <rtept lat="56.5305266498638" lon="-4.7907024063753">
+      <ele>321.5</ele>
+    </rtept>
+    <rtept lat="56.5328679099306" lon="-4.80686395214826">
+      <ele>185.6</ele>
+    </rtept>
+    <rtept lat="56.5327343726742" lon="-4.80760229377479">
+      <ele>184.5</ele>
+      <name>Inveroran</name>
+    </rtept>
+    <rtept lat="56.5369719060819" lon="-4.81338197157032">
+      <ele>170.0</ele>
+    </rtept>
+    <rtept lat="56.550145553086" lon="-4.80039740388204">
+      <ele>212.6</ele>
+    </rtept>
+    <rtept lat="56.5542939255924" lon="-4.79699328185125">
+      <ele>253.9</ele>
+    </rtept>
+    <rtept lat="56.5607216466638" lon="-4.79414717923836">
+      <ele>285.9</ele>
+    </rtept>
+    <rtept lat="56.5765611199156" lon="-4.79764473427699">
+      <ele>326.0</ele>
+    </rtept>
+    <rtept lat="56.5839847924942" lon="-4.79926842050552">
+      <ele>311.1</ele>
+    </rtept>
+    <rtept lat="56.5975737202799" lon="-4.80729642277654">
+      <ele>317.8</ele>
+    </rtept>
+    <rtept lat="56.6033024491426" lon="-4.80794976729429">
+      <ele>348.9</ele>
+    </rtept>
+    <rtept lat="56.6094262783189" lon="-4.80384084997721">
+      <ele>353.7</ele>
+    </rtept>
+    <rtept lat="56.621504135048" lon="-4.80194880148881">
+      <ele>443.5</ele>
+    </rtept>
+    <rtept lat="56.6283104002048" lon="-4.80942143231064">
+      <ele>407.8</ele>
+    </rtept>
+    <rtept lat="56.6360443454715" lon="-4.823927242861">
+      <ele>323.2</ele>
+    </rtept>
+    <rtept lat="56.6486528325262" lon="-4.83519976855203">
+      <ele>271.4</ele>
+    </rtept>
+    <rtept lat="56.6511012237759" lon="-4.84055937239132">
+      <ele>271.4</ele>
+    </rtept>
+    <rtept lat="56.6515226044103" lon="-4.84052744172808">
+      <ele>248.3</ele>
+      <name>Kingshouse Hotel</name>
+    </rtept>
+  </rte>
+</gpx>

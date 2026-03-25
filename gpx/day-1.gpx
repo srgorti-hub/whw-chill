@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="gpx_resample.py"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <rte>
+    <name>milngavie-drymen_resampled</name>
+    <desc>Resampled from milngavie-drymen.gpx | 18.95 km | ascent=146m descent=139m | 30 pts</desc>
+    <rtept lat="55.9417376613191" lon="-4.31782205100209">
+      <ele>52.9</ele>
+      <name>Milngavie</name>
+    </rtept>
+    <rtept lat="55.9476291321871" lon="-4.32211431821618">
+      <ele>60.9</ele>
+    </rtept>
+    <rtept lat="55.9497303326638" lon="-4.322216107313">
+      <ele>65.3</ele>
+    </rtept>
+    <rtept lat="55.9521953320773" lon="-4.32089799663446">
+      <ele>81.4</ele>
+    </rtept>
+    <rtept lat="55.9578950198206" lon="-4.3317651862674">
+      <ele>87.3</ele>
+    </rtept>
+    <rtept lat="55.9613969816809" lon="-4.33620585060712">
+      <ele>103.7</ele>
+    </rtept>
+    <rtept lat="55.9680335739498" lon="-4.34665393211038">
+      <ele>118.7</ele>
+      <name>Craigallian Loch</name>
+    </rtept>
+    <rtept lat="55.9693273644908" lon="-4.34879964718778">
+      <ele>120.9</ele>
+    </rtept>
+    <rtept lat="55.9805580226678" lon="-4.34948060927131">
+      <ele>120.5</ele>
+    </rtept>
+    <rtept lat="55.9823422146006" lon="-4.34853075830246">
+      <ele>130.2</ele>
+    </rtept>
+    <rtept lat="55.9846970052395" lon="-4.34735087406238">
+      <ele>130.2</ele>
+    </rtept>
+    <rtept lat="55.9857914663804" lon="-4.34580590400357">
+      <ele>135.9</ele>
+    </rtept>
+    <rtept lat="55.9874617293646" lon="-4.35295385757278">
+      <ele>128.0</ele>
+      <name>Carbeth</name>
+    </rtept>
+    <rtept lat="55.989176782579" lon="-4.35209601181366">
+      <ele>137.6</ele>
+    </rtept>
+    <rtept lat="55.9915130975875" lon="-4.35117960736697">
+      <ele>137.6</ele>
+    </rtept>
+    <rtept lat="55.9943146462449" lon="-4.35202327790666">
+      <ele>104.2</ele>
+    </rtept>
+    <rtept lat="55.9987030416156" lon="-4.36083032295936">
+      <ele>62.1</ele>
+    </rtept>
+    <rtept lat="56.0010692193102" lon="-4.36328431040499">
+      <ele>56.9</ele>
+    </rtept>
+    <rtept lat="56.0053968285978" lon="-4.36046869757811">
+      <ele>32.6</ele>
+    </rtept>
+    <rtept lat="56.0104844946432" lon="-4.36653057641089">
+      <ele>25.1</ele>
+    </rtept>
+    <rtept lat="56.0159955866115" lon="-4.37018915007082">
+      <ele>23.9</ele>
+      <name>Dumgoyne</name>
+    </rtept>
+    <rtept lat="56.0298976849146" lon="-4.38264647020948">
+      <ele>24.6</ele>
+    </rtept>
+    <rtept lat="56.0518177849445" lon="-4.40423456655582">
+      <ele>35.1</ele>
+    </rtept>
+    <rtept lat="56.051215502175" lon="-4.40884654849705">
+      <ele>29.0</ele>
+    </rtept>
+    <rtept lat="56.0489245261968" lon="-4.42050737229697">
+      <ele>34.4</ele>
+    </rtept>
+    <rtept lat="56.0496086206963" lon="-4.42521398162159">
+      <ele>24.7</ele>
+      <name>Gartness</name>
+    </rtept>
+    <rtept lat="56.0504485714116" lon="-4.42724531699617">
+      <ele>27.6</ele>
+    </rtept>
+    <rtept lat="56.0563208671923" lon="-4.43478789336855">
+      <ele>55.5</ele>
+    </rtept>
+    <rtept lat="56.0595656889196" lon="-4.43518684478222">
+      <ele>60.6</ele>
+    </rtept>
+    <rtept lat="56.0682907258725" lon="-4.43979907403318">
+      <ele>59.8</ele>
+      <name>Drymen</name>
+    </rtept>
+  </rte>
+</gpx>

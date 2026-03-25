@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPX Data Processor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+/* ===============================
+   CSS CUSTOM PROPERTIES
+=============================== */
+:root {
+  --bg: #F5F3EF;
+  --surface: #FFFFFF;
+  --surface2: #F0EDE7;
+  --green: #2C4A1E;
+  --green-mid: #3D6B2C;
+  --green-light: #EBF2E5;
+  --amber: #D4721A;
+  --amber-light: #FDF1E6;
+  --text: #1C1C1A;
+  --muted: #6B7569;
+  --border: #DDD9D0;
+  --radius: 10px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.07);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+  --danger: #C53030;
+  --danger-light: #FFF5F5;
+  --chart-line: #2C4A1E;
+  --chart-fill: rgba(44,74,30,0.12);
+  --chart-grid: #DDD9D0;
+  --chart-text: #6B7569;
+}
+
+/* ===============================
+   RESET & BASE
+=============================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ===============================
+   LAYOUT
+=============================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===============================
+   HEADER
+=============================== */
+.header {
+  background: var(--green);
+  color: #fff;
+  padding: 40px 0 36px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.header .trip-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 16px;
+}
+
+.header .instructions {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  transition: color 0.15s;
+}
+
+.back-link:hover {
+  color: #fff;
+}
+
+/* ===============================
+   ERROR & LOADING STATES
+=============================== */
+.error-banner {
+  background: var(--danger-light);
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  margin: 32px auto;
+  max-width: 600px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.error-banner code {
+  background: rgba(197,48,48,0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.loading {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--muted);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--green);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===============================
+   DAY CARDS
+=============================== */
+.day-grid {
+  padding: 32px 0 120px;
+}
+
+.day-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.day-card-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.day-label {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.day-difficulty {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: var(--green-light);
+  color: var(--green);
+}
+
+.claude-stats {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.claude-stats span {
+  margin-right: 12px;
+}
+
+/* ===============================
+   DROP ZONES
+=============================== */
+.drop-zone {
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 36px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.drop-zone:hover {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+}
+
+.drop-zone.drag-over {
+  border-color: var(--green);
+  background: var(--green-light);
+  border-style: solid;
+}
+
+.drop-zone.processed {
+  display: none;
+}
+
+.drop-zone-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 10px;
+  opacity: 0.35;
+}
+
+.drop-zone-text {
+  font-size: 0.95rem;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.drop-zone-text strong {
+  color: var(--green);
+}
+
+.drop-zone-hint {
+  font-size: 0.8rem;
+  color: var(--muted);
+  opacity: 0.7;
+  margin-top: 6px;
+  pointer-events: none;
+}
+
+.file-input {
+  display: none;
+}
+
+/* ===============================
+   GPX RESULTS (per day)
+=============================== */
+.gpx-results {
+  display: none;
+  margin-top: 16px;
+}
+
+.gpx-results.visible {
+  display: block;
+}
+
+.gpx-filename {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gpx-filename .clear-btn {
+  font-size: 0.75rem;
+  color: var(--danger);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: inherit;
+}
+
+.gpx-filename .clear-btn:hover {
+  opacity: 0.7;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+.comparison-table th {
+  text-align: left;
+  padding: 8px 12px;
+  background: var(--surface2);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+}
+
+.comparison-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.diff-cell {
+  font-weight: 500;
+}
+
+.diff-cell.significant {
+  color: var(--amber);
+  font-weight: 700;
+}
+
+.diff-cell.good {
+  color: var(--green-mid);
+}
+
+/* Mini elevation chart */
+.mini-chart-container {
+  margin-top: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface2);
+  padding: 8px;
+}
+
+.mini-chart-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===============================
+   RESULTS SUMMARY
+=============================== */
+.results-summary {
+  display: none;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.results-summary.visible {
+  display: block;
+}
+
+.results-summary h2 {
+  font-size: 1.2rem;
+  color: var(--green);
+  margin-bottom: 16px;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.summary-table th {
+  text-align: left;
+  padding: 8px 12px;
+  background: var(--surface2);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.summary-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.summary-table tr:last-child td {
+  border-bottom: none;
+}
+
+.summary-table .pending-cell {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ===============================
+   DOWNLOAD BAR
+=============================== */
+.download-bar {
+  position: sticky;
+  bottom: 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+  padding: 16px 0;
+  z-index: 100;
+  display: none;
+}
+
+.download-bar.visible {
+  display: block;
+}
+
+.download-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.processed-count {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.processed-count strong {
+  color: var(--text);
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.download-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.download-btn:hover:not(:disabled) {
+  background: var(--green-mid);
+}
+
+.download-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.download-btn.secondary {
+  background: var(--surface2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.download-btn.secondary:hover:not(:disabled) {
+  background: var(--border);
+}
+
+.download-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 768px) {
+  .header {
+    padding: 28px 0 24px;
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .drop-zone {
+    padding: 28px 16px;
+  }
+
+  .download-bar-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .comparison-table,
+  .summary-table {
+    font-size: 0.78rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td,
+  .summary-table th,
+  .summary-table td {
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .day-card-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="back-link">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Back to Guide
+    </a>
+    <h1>GPX Data Processor</h1>
+    <div class="trip-name" id="tripName">Loading...</div>
+    <p class="instructions">Drop GPX files for each day to generate accurate elevation profiles and distance/ascent stats from real GPS data, replacing estimated values.</p>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+  <div class="loading" id="loadingState">
+    <div class="loading-spinner"></div>
+    <p>Loading trip data...</p>
+  </div>
+
+  <div class="error-banner" id="errorBanner" style="display:none;"></div>
+
+  <div class="day-grid" id="dayGrid" style="display:none;">
+    <!-- Results summary (appears after processing) -->
+    <div class="results-summary" id="resultsSummary">
+      <h2>Results Summary</h2>
+      <div id="summaryTableContainer"></div>
+    </div>
+
+    <!-- Day cards built by JS -->
+    <div id="dayCards"></div>
+  </div>
+</main>
+
+<!-- DOWNLOAD BAR -->
+<div class="download-bar" id="downloadBar">
+  <div class="container">
+    <div class="download-bar-inner">
+      <div class="processed-count" id="processedCount">
+        <strong>0</strong> days processed
+      </div>
+      <div class="btn-group">
+        <button class="download-btn secondary" id="downloadTripDataBtn" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Download trip-data.json
+        </button>
+        <button class="download-btn" id="downloadElevationBtn" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Elevation Data
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ===============================
+   STATE
+=============================== */
+const state = {
+  tripData: null,
+  // { dayNum: { stats, profile, filename } }
+  gpxResults: {}
+};
+
+/* ===============================
+   INIT
+=============================== */
+async function init() {
+  try {
+    const resp = await fetch('trip-data.json');
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    state.tripData = await resp.json();
+    renderHeader();
+    buildDayCards();
+    document.getElementById('loadingState').style.display = 'none';
+    document.getElementById('dayGrid').style.display = 'block';
+  } catch (err) {
+    document.getElementById('loadingState').style.display = 'none';
+    const banner = document.getElementById('errorBanner');
+    banner.style.display = 'block';
+    banner.innerHTML = `Could not load <code>trip-data.json</code>. Make sure the file exists in the same folder as this page and that you are serving it from an HTTP server (e.g., <code>python -m http.server</code>).`;
+  }
+}
+
+/* ===============================
+   RENDER HEADER
+=============================== */
+function renderHeader() {
+  const trip = state.tripData.trip;
+  document.title = `GPX Processor — ${trip.name}`;
+  document.getElementById('tripName').textContent = `${trip.name} — ${trip.destination}`;
+}
+
+/* ===============================
+   BUILD DAY CARDS
+=============================== */
+function buildDayCards() {
+  const container = document.getElementById('dayCards');
+  const days = state.tripData.days;
+
+  let html = '';
+  days.forEach(day => {
+    html += `
+      <div class="day-card" id="card-day-${day.day}">
+        <div class="day-card-header">
+          <span class="day-label">Day ${day.day} &mdash; ${escapeHtml(day.label)}</span>
+          <span class="day-difficulty">${escapeHtml(day.difficulty)}</span>
+        </div>
+        <div class="claude-stats">
+          <span>${day.distance_km} km</span>
+          <span>${day.ascent_m}m ascent</span>
+          <span>${day.descent_m}m descent</span>
+        </div>
+
+        <div class="drop-zone" id="zone-day-${day.day}" data-day="${day.day}">
+          <svg class="drop-zone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="12" y1="18" x2="12" y2="12"/>
+            <polyline points="9 15 12 12 15 15"/>
+          </svg>
+          <div class="drop-zone-text"><strong>Drop GPX file here</strong> or click to browse</div>
+          <div class="drop-zone-hint">Accepts .gpx files</div>
+        </div>
+        <input type="file" class="file-input" id="input-day-${day.day}" accept=".gpx" data-day="${day.day}">
+
+        <div class="gpx-results" id="results-day-${day.day}">
+          <div class="gpx-filename" id="filename-day-${day.day}"></div>
+          <table class="comparison-table" id="table-day-${day.day}"></table>
+          <div class="mini-chart-container" id="chart-day-${day.day}"></div>
+        </div>
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
+  attachDropZoneListeners();
+}
+
+/* ===============================
+   DROP ZONE LISTENERS
+=============================== */
+function attachDropZoneListeners() {
+  const days = state.tripData.days;
+
+  days.forEach(day => {
+    const zone = document.getElementById(`zone-day-${day.day}`);
+    const input = document.getElementById(`input-day-${day.day}`);
+
+    zone.addEventListener('dragenter', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      zone.classList.add('drag-over');
+    });
+
+    zone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      zone.classList.add('drag-over');
+    });
+
+    zone.addEventListener('dragleave', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (!zone.contains(e.relatedTarget)) {
+        zone.classList.remove('drag-over');
+      }
+    });
+
+    zone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      zone.classList.remove('drag-over');
+      const file = e.dataTransfer.files[0];
+      if (file) processGPXForDay(day.day, file);
+    });
+
+    zone.addEventListener('click', () => input.click());
+
+    input.addEventListener('change', () => {
+      if (input.files[0]) processGPXForDay(day.day, input.files[0]);
+      input.value = '';
+    });
+  });
+}
+
+/* ===============================
+   PROCESS GPX FOR DAY
+=============================== */
+function processGPXForDay(dayNum, file) {
+  if (!file.name.toLowerCase().endsWith('.gpx')) {
+    alert('Please drop a .gpx file.');
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const gpxText = reader.result;
+      const trackPoints = parseGPX(gpxText);
+
+      if (trackPoints.length < 2) {
+        alert('GPX file contains fewer than 2 track points. Please check the file.');
+        return;
+      }
+
+      const hasElevation = trackPoints.some(p => p.ele !== null);
+      if (!hasElevation) {
+        alert('GPX file does not contain elevation data. Elevation profiles cannot be generated.');
+        return;
+      }
+
+      const stats = calculateStats(trackPoints);
+      const profile = generateElevationProfile(trackPoints);
+
+      state.gpxResults[dayNum] = {
+        stats,
+        profile,
+        filename: file.name
+      };
+
+      renderDayResults(dayNum);
+      updateSummary();
+      updateDownloadBar();
+    } catch (err) {
+      console.error('GPX parsing error:', err);
+      alert('Failed to parse GPX file. Make sure it is a valid GPX file.');
+    }
+  };
+  reader.readAsText(file);
+}
+
+/* ===============================
+   GPX PARSING ENGINE
+=============================== */
+function parseGPX(xmlText) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(xmlText, 'text/xml');
+
+  const parseError = doc.querySelector('parsererror');
+  if (parseError) throw new Error('Invalid XML');
+
+  // Use getElementsByTagNameNS to handle namespaced GPX files
+  // (e.g. xmlns="http://www.topografix.com/GPX/1/1")
+  let trkpts = doc.getElementsByTagNameNS('*', 'trkpt');
+
+  // Fallback: try route points (<rtept>) if no track points found
+  if (trkpts.length === 0) {
+    trkpts = doc.getElementsByTagNameNS('*', 'rtept');
+  }
+
+  const points = [];
+
+  for (const pt of trkpts) {
+    const lat = parseFloat(pt.getAttribute('lat'));
+    const lon = parseFloat(pt.getAttribute('lon'));
+    const eleEls = pt.getElementsByTagNameNS('*', 'ele');
+    const ele = eleEls.length > 0 ? parseFloat(eleEls[0].textContent) : null;
+    if (!isNaN(lat) && !isNaN(lon)) {
+      points.push({ lat, lon, ele });
+    }
+  }
+
+  return points;
+}
+
+function haversine(lat1, lon1, lat2, lon2) {
+  const R = 6371;
+  const toRad = (deg) => deg * Math.PI / 180;
+  const dLat = toRad(lat2 - lat1);
+  const dLon = toRad(lon2 - lon1);
+  const a = Math.sin(dLat / 2) ** 2 +
+            Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+            Math.sin(dLon / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function calculateStats(points) {
+  let totalDistance = 0;
+  let totalAscent = 0;
+  let totalDescent = 0;
+  let maxElev = -Infinity;
+  let maxElevKm = 0;
+  const NOISE_THRESHOLD = 2; // metres — ignore changes smaller than this
+
+  for (let i = 1; i < points.length; i++) {
+    const dist = haversine(points[i - 1].lat, points[i - 1].lon, points[i].lat, points[i].lon);
+    totalDistance += dist;
+
+    if (points[i].ele !== null && points[i - 1].ele !== null) {
+      const elevDiff = points[i].ele - points[i - 1].ele;
+      if (elevDiff > NOISE_THRESHOLD) {
+        totalAscent += elevDiff;
+      } else if (elevDiff < -NOISE_THRESHOLD) {
+        totalDescent += Math.abs(elevDiff);
+      }
+
+      if (points[i].ele > maxElev) {
+        maxElev = points[i].ele;
+        maxElevKm = totalDistance;
+      }
+    }
+  }
+
+  // Check first point for max elevation
+  if (points[0].ele !== null && points[0].ele > maxElev) {
+    maxElev = points[0].ele;
+    maxElevKm = 0;
+  }
+
+  return {
+    distance_km: Math.round(totalDistance * 10) / 10,
+    ascent_m: Math.round(totalAscent),
+    descent_m: Math.round(totalDescent),
+    max_elev_m: Math.round(maxElev),
+    max_elev_km: Math.round(maxElevKm * 10) / 10
+  };
+}
+
+function generateElevationProfile(points, spacingKm = 0.5) {
+  // Build cumulative distance array
+  const cumDist = [0];
+  for (let i = 1; i < points.length; i++) {
+    cumDist.push(cumDist[i - 1] + haversine(points[i - 1].lat, points[i - 1].lon, points[i].lat, points[i].lon));
+  }
+
+  const totalDist = cumDist[cumDist.length - 1];
+  const profilePoints = [];
+
+  // Always include start point
+  if (points[0].ele !== null) {
+    profilePoints.push({ km: 0, elevation_m: Math.round(points[0].ele) });
+  }
+
+  // Sample at regular intervals
+  let nextKm = spacingKm;
+  let j = 0;
+  while (nextKm < totalDist) {
+    // Find the segment containing nextKm
+    while (j < cumDist.length - 1 && cumDist[j + 1] < nextKm) j++;
+
+    if (j < cumDist.length - 1) {
+      const segLen = cumDist[j + 1] - cumDist[j];
+      if (segLen > 0 && points[j].ele !== null && points[j + 1].ele !== null) {
+        const frac = (nextKm - cumDist[j]) / segLen;
+        const elev = points[j].ele + frac * (points[j + 1].ele - points[j].ele);
+        profilePoints.push({ km: Math.round(nextKm * 10) / 10, elevation_m: Math.round(elev) });
+      }
+    }
+    nextKm += spacingKm;
+  }
+
+  // Always include end point
+  const lastPt = points[points.length - 1];
+  if (lastPt.ele !== null) {
+    const endKm = Math.round(totalDist * 10) / 10;
+    // Avoid duplicate if last sampled point is very close to end
+    if (profilePoints.length === 0 || Math.abs(profilePoints[profilePoints.length - 1].km - endKm) > 0.05) {
+      profilePoints.push({ km: endKm, elevation_m: Math.round(lastPt.ele) });
+    }
+  }
+
+  // Find summit
+  let summitPt = profilePoints[0];
+  for (const p of profilePoints) {
+    if (p.elevation_m > summitPt.elevation_m) summitPt = p;
+  }
+
+  return {
+    points: profilePoints,
+    summit_label: `${summitPt.elevation_m}m`,
+    summit_km: summitPt.km
+  };
+}
+
+/* ===============================
+   RENDER DAY RESULTS
+=============================== */
+function renderDayResults(dayNum) {
+  const day = state.tripData.days.find(d => d.day === dayNum);
+  const result = state.gpxResults[dayNum];
+  if (!day || !result) return;
+
+  const zone = document.getElementById(`zone-day-${dayNum}`);
+  zone.classList.add('processed');
+
+  const resultsDiv = document.getElementById(`results-day-${dayNum}`);
+  resultsDiv.classList.add('visible');
+
+  // Filename with clear button
+  const filenameDiv = document.getElementById(`filename-day-${dayNum}`);
+  filenameDiv.innerHTML = `
+    <span>Loaded: <strong>${escapeHtml(result.filename)}</strong></span>
+    <button class="clear-btn" data-day="${dayNum}">Clear &amp; re-drop</button>
+  `;
+  filenameDiv.querySelector('.clear-btn').addEventListener('click', () => clearDay(dayNum));
+
+  // Comparison table
+  renderComparisonTable(dayNum);
+
+  // Mini elevation chart
+  renderMiniChart(dayNum);
+}
+
+function renderComparisonTable(dayNum) {
+  const day = state.tripData.days.find(d => d.day === dayNum);
+  const gpx = state.gpxResults[dayNum].stats;
+  const table = document.getElementById(`table-day-${dayNum}`);
+
+  const rows = [
+    { label: 'Distance', claude: day.distance_km, gpxVal: gpx.distance_km, unit: 'km', field: 'distance' },
+    { label: 'Ascent', claude: day.ascent_m, gpxVal: gpx.ascent_m, unit: 'm', field: 'ascent' },
+    { label: 'Descent', claude: day.descent_m, gpxVal: gpx.descent_m, unit: 'm', field: 'descent' }
+  ];
+
+  let html = `
+    <thead>
+      <tr><th>Metric</th><th>Estimated</th><th>GPX</th><th>Diff</th></tr>
+    </thead>
+    <tbody>
+  `;
+
+  rows.forEach(row => {
+    const diff = row.gpxVal - row.claude;
+    const pct = row.claude > 0 ? Math.abs(diff / row.claude * 100) : 0;
+    const significant = pct > 10;
+    const sign = diff > 0 ? '+' : '';
+    const diffClass = significant ? 'significant' : 'good';
+
+    html += `
+      <tr>
+        <td>${row.label}</td>
+        <td>${row.claude} ${row.unit}</td>
+        <td><strong>${row.gpxVal} ${row.unit}</strong></td>
+        <td class="diff-cell ${diffClass}">${sign}${Math.round(diff * 10) / 10} ${row.unit} (${pct.toFixed(0)}%)</td>
+      </tr>
+    `;
+  });
+
+  html += '</tbody>';
+  table.innerHTML = html;
+}
+
+/* ===============================
+   MINI ELEVATION CHART (SVG)
+=============================== */
+function renderMiniChart(dayNum) {
+  const container = document.getElementById(`chart-day-${dayNum}`);
+  const result = state.gpxResults[dayNum];
+  if (!result || !result.profile || result.profile.points.length < 2) {
+    container.innerHTML = '<p style="font-size:12px;color:var(--muted);padding:12px;">Insufficient data for chart</p>';
+    return;
+  }
+
+  const points = result.profile.points;
+  const w = 600, h = 140;
+  const padL = 42, padR = 12, padT = 20, padB = 28;
+  const chartW = w - padL - padR;
+  const chartH = h - padT - padB;
+
+  const xMin = points[0].km;
+  const xMax = points[points.length - 1].km;
+  const yMin = Math.floor(Math.min(...points.map(p => p.elevation_m)) / 50) * 50;
+  const yMax = Math.ceil(Math.max(...points.map(p => p.elevation_m)) / 50) * 50;
+  const yRange = yMax - yMin || 1;
+  const xRange = xMax - xMin || 1;
+
+  const sx = (km) => padL + ((km - xMin) / xRange) * chartW;
+  const sy = (elev) => padT + chartH - ((elev - yMin) / yRange) * chartH;
+
+  // Grid lines
+  let gridLines = '';
+  const ySteps = 4;
+  for (let i = 0; i <= ySteps; i++) {
+    const elev = yMin + (yRange / ySteps) * i;
+    const y = sy(elev);
+    gridLines += `<line x1="${padL}" y1="${y}" x2="${w - padR}" y2="${y}" stroke="var(--chart-grid)" stroke-width="0.5" />`;
+    gridLines += `<text x="${padL - 6}" y="${y + 3}" text-anchor="end" fill="var(--chart-text)" font-size="9" font-family="Plus Jakarta Sans">${Math.round(elev)}m</text>`;
+  }
+
+  // X-axis labels
+  let xLabels = '';
+  const xStep = Math.ceil(xRange / 5);
+  for (let km = Math.ceil(xMin); km <= xMax; km += xStep) {
+    const x = sx(km);
+    xLabels += `<text x="${x}" y="${h - 4}" text-anchor="middle" fill="var(--chart-text)" font-size="9" font-family="Plus Jakarta Sans">${km} km</text>`;
+  }
+
+  // Path
+  const pathD = points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${sx(p.km).toFixed(1)} ${sy(p.elevation_m).toFixed(1)}`).join(' ');
+  const areaD = pathD + ` L ${sx(xMax).toFixed(1)} ${sy(yMin).toFixed(1)} L ${sx(xMin).toFixed(1)} ${sy(yMin).toFixed(1)} Z`;
+
+  // Summit marker
+  let summitMarker = '';
+  if (result.profile.summit_km !== undefined && result.profile.summit_label) {
+    const summitPoint = points.reduce((max, p) => p.elevation_m > max.elevation_m ? p : max, points[0]);
+    const cx = sx(summitPoint.km);
+    const cy = sy(summitPoint.elevation_m);
+    summitMarker = `
+      <circle cx="${cx}" cy="${cy}" r="3" fill="var(--chart-line)" />
+      <text x="${cx}" y="${cy - 7}" text-anchor="middle" fill="var(--chart-line)" font-size="9" font-weight="700" font-family="Plus Jakarta Sans">${result.profile.summit_label}</text>
+    `;
+  }
+
+  container.innerHTML = `
+    <svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="xMidYMid meet">
+      ${gridLines}
+      ${xLabels}
+      <path d="${areaD}" fill="var(--chart-fill)" />
+      <path d="${pathD}" fill="none" stroke="var(--chart-line)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      ${summitMarker}
+    </svg>
+  `;
+}
+
+/* ===============================
+   CLEAR DAY
+=============================== */
+function clearDay(dayNum) {
+  delete state.gpxResults[dayNum];
+
+  const zone = document.getElementById(`zone-day-${dayNum}`);
+  zone.classList.remove('processed');
+
+  const resultsDiv = document.getElementById(`results-day-${dayNum}`);
+  resultsDiv.classList.remove('visible');
+
+  updateSummary();
+  updateDownloadBar();
+}
+
+/* ===============================
+   RESULTS SUMMARY
+=============================== */
+function updateSummary() {
+  const summary = document.getElementById('resultsSummary');
+  const processed = Object.keys(state.gpxResults);
+
+  if (processed.length === 0) {
+    summary.classList.remove('visible');
+    return;
+  }
+
+  summary.classList.add('visible');
+  const container = document.getElementById('summaryTableContainer');
+  const days = state.tripData.days;
+
+  let html = `
+    <table class="summary-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Est. Dist.</th>
+          <th>GPX Dist.</th>
+          <th>Est. Ascent</th>
+          <th>GPX Ascent</th>
+          <th>Est. Descent</th>
+          <th>GPX Descent</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+
+  days.forEach(day => {
+    const result = state.gpxResults[day.day];
+    if (result) {
+      const s = result.stats;
+      const distDiff = Math.abs(s.distance_km - day.distance_km) / day.distance_km * 100;
+      const ascDiff = Math.abs(s.ascent_m - day.ascent_m) / (day.ascent_m || 1) * 100;
+      const desDiff = Math.abs(s.descent_m - day.descent_m) / (day.descent_m || 1) * 100;
+
+      html += `
+        <tr>
+          <td><strong>Day ${day.day}</strong></td>
+          <td>${day.distance_km} km</td>
+          <td class="diff-cell ${distDiff > 10 ? 'significant' : ''}">${s.distance_km} km</td>
+          <td>${day.ascent_m} m</td>
+          <td class="diff-cell ${ascDiff > 10 ? 'significant' : ''}">${s.ascent_m} m</td>
+          <td>${day.descent_m} m</td>
+          <td class="diff-cell ${desDiff > 10 ? 'significant' : ''}">${s.descent_m} m</td>
+        </tr>
+      `;
+    } else {
+      html += `
+        <tr>
+          <td>Day ${day.day}</td>
+          <td colspan="6" class="pending-cell">Not yet processed</td>
+        </tr>
+      `;
+    }
+  });
+
+  html += '</tbody></table>';
+  container.innerHTML = html;
+}
+
+/* ===============================
+   DOWNLOAD BAR
+=============================== */
+function updateDownloadBar() {
+  const bar = document.getElementById('downloadBar');
+  const count = Object.keys(state.gpxResults).length;
+
+  if (count > 0) {
+    bar.classList.add('visible');
+  } else {
+    bar.classList.remove('visible');
+  }
+
+  document.getElementById('processedCount').innerHTML =
+    `<strong>${count}</strong> day${count !== 1 ? 's' : ''} processed`;
+  document.getElementById('downloadElevationBtn').disabled = count === 0;
+  document.getElementById('downloadTripDataBtn').disabled = count === 0;
+}
+
+/* ===============================
+   EXPORT: ELEVATION ZIP
+=============================== */
+document.getElementById('downloadElevationBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('downloadElevationBtn');
+  const original = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 0.8s linear infinite;"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg> Generating...`;
+
+  try {
+    const zip = new JSZip();
+    const elevFolder = zip.folder('elevation');
+
+    for (const [dayNum, result] of Object.entries(state.gpxResults)) {
+      const json = JSON.stringify(result.profile, null, 2);
+      elevFolder.file(`day-${dayNum}-profile.json`, json);
+    }
+
+    const blob = await zip.generateAsync({ type: 'blob' });
+    downloadBlob(blob, 'elevation-data.zip');
+  } catch (err) {
+    console.error('Zip generation failed:', err);
+    alert('Failed to generate zip file.');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = original;
+  }
+});
+
+/* ===============================
+   EXPORT: UPDATED TRIP-DATA.JSON
+=============================== */
+document.getElementById('downloadTripDataBtn').addEventListener('click', () => {
+  const updated = JSON.parse(JSON.stringify(state.tripData));
+
+  let totalDist = 0;
+  let totalAscent = 0;
+
+  updated.days.forEach(day => {
+    const result = state.gpxResults[day.day];
+    if (result) {
+      day.distance_km = result.stats.distance_km;
+      day.ascent_m = result.stats.ascent_m;
+      day.descent_m = result.stats.descent_m;
+    }
+    totalDist += day.distance_km;
+    totalAscent += day.ascent_m;
+  });
+
+  updated.trip.total_distance_km = Math.round(totalDist * 10) / 10;
+  updated.trip.total_ascent_m = Math.round(totalAscent);
+
+  const json = JSON.stringify(updated, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  downloadBlob(blob, 'trip-data.json');
+});
+
+/* ===============================
+   UTILITY
+=============================== */
+function downloadBlob(blob, filename) {
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(link.href);
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+/* ===============================
+   BOOT
+=============================== */
+init();
+</script>
+</body>
+</html>

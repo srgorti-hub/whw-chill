@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="gpx_resample.py" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <rte>
+    <name>inveroran-kingshouse</name>
+    <desc>Trimmed from tyndrum-kingshouse | 14.6 km | ascent=288m descent=225m | 16 pts</desc>
+    <rtept lat="56.5327343726742" lon="-4.80760229377479">
+      <ele>184.5</ele>
+      <name>Inveroran</name>
+    </rtept>
+    <rtept lat="56.5369719060819" lon="-4.81338197157032">
+      <ele>170.0</ele>
+    </rtept>
+    <rtept lat="56.550145553086" lon="-4.80039740388204">
+      <ele>212.6</ele>
+    </rtept>
+    <rtept lat="56.5542939255924" lon="-4.79699328185125">
+      <ele>253.9</ele>
+    </rtept>
+    <rtept lat="56.5607216466638" lon="-4.79414717923836">
+      <ele>285.9</ele>
+    </rtept>
+    <rtept lat="56.5765611199156" lon="-4.79764473427699">
+      <ele>326.0</ele>
+    </rtept>
+    <rtept lat="56.5839847924942" lon="-4.79926842050552">
+      <ele>311.1</ele>
+    </rtept>
+    <rtept lat="56.5975737202799" lon="-4.80729642277654">
+      <ele>317.8</ele>
+    </rtept>
+    <rtept lat="56.6033024491426" lon="-4.80794976729429">
+      <ele>348.9</ele>
+    </rtept>
+    <rtept lat="56.6094262783189" lon="-4.80384084997721">
+      <ele>353.7</ele>
+    </rtept>
+    <rtept lat="56.621504135048" lon="-4.80194880148881">
+      <ele>443.5</ele>
+    </rtept>
+    <rtept lat="56.6283104002048" lon="-4.80942143231064">
+      <ele>407.8</ele>
+    </rtept>
+    <rtept lat="56.6360443454715" lon="-4.823927242861">
+      <ele>323.2</ele>
+    </rtept>
+    <rtept lat="56.6486528325262" lon="-4.83519976855203">
+      <ele>271.4</ele>
+    </rtept>
+    <rtept lat="56.6511012237759" lon="-4.84055937239132">
+      <ele>271.4</ele>
+    </rtept>
+    <rtept lat="56.6515226044103" lon="-4.84052744172808">
+      <ele>248.3</ele>
+      <name>Kingshouse Hotel</name>
+    </rtept>
+  </rte>
+</gpx>

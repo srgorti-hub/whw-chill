@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="gpx_resample.py"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <rte>
+    <name>tyndrum-inveroran_resampled</name>
+    <desc>Resampled from tyndrum-inveroran.gpx | 14.17 km | ascent=283m descent=333m | 35 pts</desc>
+    <rtept lat="56.4383825406574" lon="-4.7135580187669">
+      <ele>235.1</ele>
+      <name>Tyndrum</name>
+    </rtept>
+    <rtept lat="56.4397548852842" lon="-4.71245517720805">
+      <ele>253.6</ele>
+    </rtept>
+    <rtept lat="56.4408167868301" lon="-4.71157353016805">
+      <ele>253.6</ele>
+    </rtept>
+    <rtept lat="56.4420794226031" lon="-4.71096575638067">
+      <ele>266.6</ele>
+    </rtept>
+    <rtept lat="56.4474793503527" lon="-4.70899731972699">
+      <ele>297.0</ele>
+    </rtept>
+    <rtept lat="56.4544763738496" lon="-4.71085907507143">
+      <ele>327.2</ele>
+    </rtept>
+    <rtept lat="56.4618005481214" lon="-4.71337805586948">
+      <ele>332.0</ele>
+    </rtept>
+    <rtept lat="56.4634272087536" lon="-4.714208494129">
+      <ele>326.3</ele>
+    </rtept>
+    <rtept lat="56.4646346230329" lon="-4.71653526483733">
+      <ele>294.4</ele>
+    </rtept>
+    <rtept lat="56.4671955301263" lon="-4.71697803505442">
+      <ele>288.7</ele>
+    </rtept>
+    <rtept lat="56.4746603781476" lon="-4.72004512059821">
+      <ele>242.5</ele>
+    </rtept>
+    <rtept lat="56.4806182401481" lon="-4.71805136306422">
+      <ele>230.6</ele>
+    </rtept>
+    <rtept lat="56.4838712000202" lon="-4.71849523749731">
+      <ele>203.5</ele>
+    </rtept>
+    <rtept lat="56.4851808408414" lon="-4.7227151536694">
+      <ele>198.2</ele>
+    </rtept>
+    <rtept lat="56.4905827121303" lon="-4.73497909259251">
+      <ele>196.4</ele>
+    </rtept>
+    <rtept lat="56.4965576385075" lon="-4.74403806513088">
+      <ele>213.5</ele>
+    </rtept>
+    <rtept lat="56.5119036597717" lon="-4.7584940598314">
+      <ele>220.3</ele>
+    </rtept>
+    <rtept lat="56.5124778908853" lon="-4.75934863604381">
+      <ele>211.9</ele>
+    </rtept>
+    <rtept lat="56.5167606485864" lon="-4.7640011136605">
+      <ele>194.7</ele>
+    </rtept>
+    <rtept lat="56.5178888273452" lon="-4.77024552045749">
+      <ele>159.7</ele>
+    </rtept>
+    <rtept lat="56.5185202701597" lon="-4.77175497290696">
+      <ele>159.7</ele>
+    </rtept>
+    <rtept lat="56.5239653059734" lon="-4.77867378257271">
+      <ele>210.2</ele>
+    </rtept>
+    <rtept lat="56.5251858484201" lon="-4.77956004128185">
+      <ele>222.7</ele>
+      <name>Bridge of Orchy</name>
+    </rtept>
+    <rtept lat="56.5261601123859" lon="-4.78181064517548">
+      <ele>248.8</ele>
+    </rtept>
+    <rtept lat="56.5255296463421" lon="-4.78467540700643">
+      <ele>276.5</ele>
+    </rtept>
+    <rtept lat="56.5266365320665" lon="-4.7850168725804">
+      <ele>278.8</ele>
+    </rtept>
+    <rtept lat="56.5283456972304" lon="-4.78655731425487">
+      <ele>306.0</ele>
+    </rtept>
+    <rtept lat="56.5302951607609" lon="-4.78860350137175">
+      <ele>321.5</ele>
+    </rtept>
+    <rtept lat="56.5305266498638" lon="-4.7907024063753">
+      <ele>321.5</ele>
+    </rtept>
+    <rtept lat="56.5321467231583" lon="-4.79500183654966">
+      <ele>292.0</ele>
+    </rtept>
+    <rtept lat="56.5329084585192" lon="-4.79749784446158">
+      <ele>254.9</ele>
+    </rtept>
+    <rtept lat="56.5324406136864" lon="-4.80030981254307">
+      <ele>235.3</ele>
+    </rtept>
+    <rtept lat="56.5319978088954" lon="-4.80161088037659">
+      <ele>233.2</ele>
+    </rtept>
+    <rtept lat="56.532650383201" lon="-4.80614842588373">
+      <ele>189.7</ele>
+    </rtept>
+    <rtept lat="56.5327343726742" lon="-4.80760229377479">
+      <ele>184.5</ele>
+      <name>Inveroran</name>
+    </rtept>
+  </rte>
+</gpx>

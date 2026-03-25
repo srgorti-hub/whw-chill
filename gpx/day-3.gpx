@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="gpx_resample.py" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <rte>
+    <name>rowardennan-inversnaid</name>
+    <desc>Truncated from rowardennan-inverarnan | 11.5 km | ascent=129m descent=113m | 13 pts</desc>
+    <rtept lat="56.149529742" lon="-4.641086572">
+      <ele>25.9</ele>
+      <name>Rowardennan</name>
+    </rtept>
+    <rtept lat="56.173409925" lon="-4.657801604">
+      <ele>35.4</ele>
+      <name>Ptarmigan Lodge</name>
+    </rtept>
+    <rtept lat="56.197410646" lon="-4.681840298">
+      <ele>10.6</ele>
+    </rtept>
+    <rtept lat="56.200956141" lon="-4.682894077">
+      <ele>48.0</ele>
+    </rtept>
+    <rtept lat="56.211472556" lon="-4.674345306">
+      <ele>81.8</ele>
+      <name>peak_8.2km_82m</name>
+    </rtept>
+    <rtept lat="56.218295221" lon="-4.674859399">
+      <ele>30.5</ele>
+    </rtept>
+    <rtept lat="56.223501473" lon="-4.676177403">
+      <ele>46.5</ele>
+    </rtept>
+    <rtept lat="56.225058549" lon="-4.677989784">
+      <ele>18.2</ele>
+      <name>Rob Roy's Cave</name>
+    </rtept>
+    <rtept lat="56.22593504" lon="-4.678025141">
+      <ele>23.9</ele>
+    </rtept>
+    <rtept lat="56.231568724" lon="-4.681516731">
+      <ele>47.8</ele>
+    </rtept>
+    <rtept lat="56.23757118" lon="-4.683253378">
+      <ele>50.7</ele>
+      <name>col_11.3km_51m</name>
+    </rtept>
+    <rtept lat="56.242356792" lon="-4.683407451">
+      <ele>44.8</ele>
+    </rtept>
+    <rtept lat="56.245934862" lon="-4.686189114">
+      <ele>41.9</ele>
+      <name>Inversnaid</name>
+    </rtept>
+    </rte>
+</gpx>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="gpx_resample.py"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <rte>
+    <name>rowardennan-inverarnan_resampled</name>
+    <desc>Resampled from rowardennan-inverarnan.gpx | 22.37 km | ascent=336m descent=343m | 30 pts</desc>
+    <rtept lat="56.149529742" lon="-4.641086572">
+      <ele>25.9</ele>
+      <name>Rowardennan</name>
+    </rtept>
+    <rtept lat="56.173409925" lon="-4.657801604">
+      <ele>35.4</ele>
+      <name>Ptarmigan Lodge</name>
+    </rtept>
+    <rtept lat="56.197410646" lon="-4.681840298">
+      <ele>10.6</ele>
+    </rtept>
+    <rtept lat="56.200956141" lon="-4.682894077">
+      <ele>48.0</ele>
+    </rtept>
+    <rtept lat="56.211472556" lon="-4.674345306">
+      <ele>81.8</ele>
+      <name>peak_8.2km_82m</name>
+    </rtept>
+    <rtept lat="56.218295221" lon="-4.674859399">
+      <ele>30.5</ele>
+    </rtept>
+    <rtept lat="56.223501473" lon="-4.676177403">
+      <ele>46.5</ele>
+    </rtept>
+    <rtept lat="56.225058549" lon="-4.677989784">
+      <ele>18.2</ele>
+      <name>Rob Roy's Cave</name>
+    </rtept>
+    <rtept lat="56.22593504" lon="-4.678025141">
+      <ele>23.9</ele>
+    </rtept>
+    <rtept lat="56.231568724" lon="-4.681516731">
+      <ele>47.8</ele>
+    </rtept>
+    <rtept lat="56.23757118" lon="-4.683253378">
+      <ele>50.7</ele>
+      <name>col_11.3km_51m</name>
+    </rtept>
+    <rtept lat="56.242356792" lon="-4.683407451">
+      <ele>44.8</ele>
+    </rtept>
+    <rtept lat="56.245934862" lon="-4.686189114">
+      <ele>41.9</ele>
+      <name>Inversnaid</name>
+    </rtept>
+    <rtept lat="56.250151291" lon="-4.690695164">
+      <ele>29.0</ele>
+    </rtept>
+    <rtept lat="56.254473931" lon="-4.694279639">
+      <ele>76.2</ele>
+    </rtept>
+    <rtept lat="56.270590517" lon="-4.6925184">
+      <ele>49.7</ele>
+    </rtept>
+    <rtept lat="56.271919432" lon="-4.692249961">
+      <ele>75.2</ele>
+    </rtept>
+    <rtept lat="56.27706502" lon="-4.691060684">
+      <ele>77.2</ele>
+    </rtept>
+    <rtept lat="56.277705573" lon="-4.691364203">
+      <ele>54.6</ele>
+    </rtept>
+    <rtept lat="56.284636669" lon="-4.693376887">
+      <ele>42.7</ele>
+      <name>Doune Byre</name>
+    </rtept>
+    <rtept lat="56.28554165" lon="-4.694539422">
+      <ele>37.6</ele>
+    </rtept>
+    <rtept lat="56.29176931" lon="-4.695378676">
+      <ele>63.3</ele>
+    </rtept>
+    <rtept lat="56.29566294" lon="-4.698187457">
+      <ele>19.2</ele>
+    </rtept>
+    <rtept lat="56.301520931" lon="-4.702703663">
+      <ele>18.8</ele>
+    </rtept>
+    <rtept lat="56.309220477" lon="-4.706931226">
+      <ele>103.3</ele>
+    </rtept>
+    <rtept lat="56.313131432" lon="-4.708074837">
+      <ele>95.8</ele>
+    </rtept>
+    <rtept lat="56.316580195" lon="-4.710376307">
+      <ele>118.2</ele>
+    </rtept>
+    <rtept lat="56.320084977" lon="-4.712539834">
+      <ele>94.1</ele>
+    </rtept>
+    <rtept lat="56.32050955" lon="-4.713058428">
+      <ele>64.6</ele>
+    </rtept>
+    <rtept lat="56.329864139" lon="-4.716848191">
+      <ele>19.2</ele>
+      <name>Inverarnan</name>
+    </rtept>
+  </rte>
+</gpx>

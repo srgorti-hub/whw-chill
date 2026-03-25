@@ -1,0 +1,130 @@
+{
+  "points": [
+    {
+      "km": 0,
+      "elevation_m": 169
+    },
+    {
+      "km": 0.5,
+      "elevation_m": 173
+    },
+    {
+      "km": 1,
+      "elevation_m": 185
+    },
+    {
+      "km": 1.5,
+      "elevation_m": 200
+    },
+    {
+      "km": 2,
+      "elevation_m": 223
+    },
+    {
+      "km": 2.5,
+      "elevation_m": 259
+    },
+    {
+      "km": 3,
+      "elevation_m": 282
+    },
+    {
+      "km": 3.5,
+      "elevation_m": 291
+    },
+    {
+      "km": 4,
+      "elevation_m": 300
+    },
+    {
+      "km": 4.5,
+      "elevation_m": 309
+    },
+    {
+      "km": 5,
+      "elevation_m": 326
+    },
+    {
+      "km": 5.5,
+      "elevation_m": 327
+    },
+    {
+      "km": 6,
+      "elevation_m": 311
+    },
+    {
+      "km": 6.5,
+      "elevation_m": 314
+    },
+    {
+      "km": 7,
+      "elevation_m": 319
+    },
+    {
+      "km": 7.5,
+      "elevation_m": 316
+    },
+    {
+      "km": 8,
+      "elevation_m": 340
+    },
+    {
+      "km": 8.5,
+      "elevation_m": 349
+    },
+    {
+      "km": 9,
+      "elevation_m": 352
+    },
+    {
+      "km": 9.5,
+      "elevation_m": 394
+    },
+    {
+      "km": 10,
+      "elevation_m": 427
+    },
+    {
+      "km": 10.5,
+      "elevation_m": 445
+    },
+    {
+      "km": 11,
+      "elevation_m": 418
+    },
+    {
+      "km": 11.5,
+      "elevation_m": 394
+    },
+    {
+      "km": 12,
+      "elevation_m": 367
+    },
+    {
+      "km": 12.5,
+      "elevation_m": 333
+    },
+    {
+      "km": 13,
+      "elevation_m": 308
+    },
+    {
+      "km": 13.5,
+      "elevation_m": 292
+    },
+    {
+      "km": 14,
+      "elevation_m": 283
+    },
+    {
+      "km": 14.5,
+      "elevation_m": 257
+    },
+    {
+      "km": 14.6,
+      "elevation_m": 248
+    }
+  ],
+  "summit_label": "445m",
+  "summit_km": 10.5
+}

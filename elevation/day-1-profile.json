@@ -1,0 +1,162 @@
+{
+  "points": [
+    {
+      "km": 0,
+      "elevation_m": 53
+    },
+    {
+      "km": 0.5,
+      "elevation_m": 60
+    },
+    {
+      "km": 1,
+      "elevation_m": 67
+    },
+    {
+      "km": 1.5,
+      "elevation_m": 86
+    },
+    {
+      "km": 2,
+      "elevation_m": 84
+    },
+    {
+      "km": 2.5,
+      "elevation_m": 95
+    },
+    {
+      "km": 3,
+      "elevation_m": 108
+    },
+    {
+      "km": 3.5,
+      "elevation_m": 112
+    },
+    {
+      "km": 4,
+      "elevation_m": 120
+    },
+    {
+      "km": 4.5,
+      "elevation_m": 114
+    },
+    {
+      "km": 5,
+      "elevation_m": 124
+    },
+    {
+      "km": 5.5,
+      "elevation_m": 121
+    },
+    {
+      "km": 6,
+      "elevation_m": 145
+    },
+    {
+      "km": 6.5,
+      "elevation_m": 128
+    },
+    {
+      "km": 7,
+      "elevation_m": 138
+    },
+    {
+      "km": 7.5,
+      "elevation_m": 100
+    },
+    {
+      "km": 8,
+      "elevation_m": 71
+    },
+    {
+      "km": 8.5,
+      "elevation_m": 50
+    },
+    {
+      "km": 9,
+      "elevation_m": 34
+    },
+    {
+      "km": 9.5,
+      "elevation_m": 31
+    },
+    {
+      "km": 10,
+      "elevation_m": 25
+    },
+    {
+      "km": 10.5,
+      "elevation_m": 24
+    },
+    {
+      "km": 11,
+      "elevation_m": 27
+    },
+    {
+      "km": 11.5,
+      "elevation_m": 28
+    },
+    {
+      "km": 12,
+      "elevation_m": 23
+    },
+    {
+      "km": 12.5,
+      "elevation_m": 26
+    },
+    {
+      "km": 13,
+      "elevation_m": 28
+    },
+    {
+      "km": 13.5,
+      "elevation_m": 34
+    },
+    {
+      "km": 14,
+      "elevation_m": 29
+    },
+    {
+      "km": 14.5,
+      "elevation_m": 29
+    },
+    {
+      "km": 15,
+      "elevation_m": 36
+    },
+    {
+      "km": 15.5,
+      "elevation_m": 29
+    },
+    {
+      "km": 16,
+      "elevation_m": 35
+    },
+    {
+      "km": 16.5,
+      "elevation_m": 26
+    },
+    {
+      "km": 17,
+      "elevation_m": 38
+    },
+    {
+      "km": 17.5,
+      "elevation_m": 55
+    },
+    {
+      "km": 18,
+      "elevation_m": 62
+    },
+    {
+      "km": 18.5,
+      "elevation_m": 60
+    },
+    {
+      "km": 19,
+      "elevation_m": 60
+    }
+  ],
+  "summit_label": "145m",
+  "summit_km": 6
+}
